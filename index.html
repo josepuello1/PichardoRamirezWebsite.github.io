@@ -217,15 +217,25 @@
             text-align: center;
         }
         .logo-container img {
+            text-align: center;
             width: auto; /* Make the logo responsive */
             max-width: 600px;
             min-width: 200px;
-            min-height: fit-content;
             height: auto; /* Maintain aspect ratio */
+        }
+
+        .logo {
+            max-width: 100%; /* Allows image to scale down */
+            height: auto; /* Keeps the aspect ratio */
+            display: inline;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+
+            .logo {
+                max-width: 80%; /* Shrinks logo slightly more on smaller screens */
+            }
 
             .logo-container img {
                 max-width: 150px; /* Smaller max width on mobile */
@@ -274,7 +284,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="logo-no-background.png" alt="Pichardo, Ramirez & Co., SRL - Industrial Trade Representatives">
+            <img src="logo-no-background.png" class="logo" alt="Pichardo, Ramirez & Co., SRL - Industrial Trade Representatives">
         </div>
         <button class="language-toggle" id="translate-btn">ES | EN</button>
         
