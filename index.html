@@ -78,6 +78,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
         }
 
         nav ul li {
@@ -211,15 +212,36 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column;
+                flex-direction: column; /* Stack navigation items vertically */
             }
 
             nav ul li a {
-                text-align: center;
+                text-align: center; /* Center align text for smaller screens */
+                padding: 1rem; /* Reduced padding for smaller screens */
             }
 
             .hero-title {
-                font-size: 2rem;
+                font-size: 2rem; /* Responsive font size */
+            }
+
+            .hero-subtitle {
+                font-size: 1rem; /* Responsive font size */
+            }
+
+            .industry-card {
+                padding: 1rem; /* Reduced padding for smaller screens */
+            }
+
+            .section-title {
+                font-size: 1.5rem; /* Responsive font size */
+            }
+
+            .contact-form {
+                padding: 1rem; /* Reduced padding for smaller screens */
+            }
+
+            .language-toggle {
+                font-size: 0.9rem; /* Responsive font size */
             }
         }
     </style>
