@@ -78,7 +78,7 @@
         .logo-container {
             position: relative;
             z-index: 2;
-            animation: fadeInUp 0.5s ease-out;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .logo-container img {
@@ -222,7 +222,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 2;
-            animation: fadeInUp 0.6s ease-out 0.1s both;
+            animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         .hero-title {
@@ -673,11 +673,11 @@
             transform: translateY(-3px);
         }
 
-        /* Optimized Animations */
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -690,37 +690,15 @@
             to { opacity: 1; }
         }
 
-        /* Fast-loading animation class - much more aggressive settings */
         .animate-on-scroll {
             opacity: 0;
-            transform: translateY(15px);
-            transition: all 0.2s ease-out;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
 
         .animate-on-scroll.animate {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* Critical content - always visible for above-the-fold content */
-        .critical-content {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-
-        /* Reduced motion for users who prefer it */
-        @media (prefers-reduced-motion: reduce) {
-            .animate-on-scroll {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
-            
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
         }
 
         /* Mobile Responsive */
@@ -791,13 +769,6 @@
                 right: 1rem;
                 z-index: 1001;
             }
-
-            /* Mobile optimizations - remove animations on mobile for better performance */
-            .animate-on-scroll {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
         }
 
         @media (max-width: 480px) {
@@ -839,7 +810,7 @@
         </ul>
     </nav>
 
-    <section class="hero-section critical-content" id="home">
+    <section class="hero-section" id="home">
         <div class="hero-content">
             <h1 class="hero-title" data-eng="Your Trusted Partner in Trade in the Dominican Republic Since 1973" data-es="Su Socio Confiable en el Comercio en Republica Dominicana Desde 1973">Your Trusted Partner in Trade in the Dominican Republic Since 1973</h1>
             <p class="hero-subtitle" data-eng="Connecting international manufacturers with Dominican industry through decades of expertise and trusted relationships" data-es="Conectando fabricantes internacionales con la industria dominicana a través de décadas de experiencia y relaciones de confianza">Connecting international manufacturers with Dominican industry through decades of expertise and trusted relationships</p>
@@ -893,11 +864,11 @@ Our commitment is to deliver exceptional service and quality products combined w
                     </div>
                     <div class="industry-card animate-on-scroll">
                         <h3 data-eng="Paper & Pulp" data-es="Papel y Pasta">Paper & Pulp</h3>
-                        <p data-eng="High-quality paper and pulp products, including Printing and Publishing, Paperboard and Packaging papers, Tissue & Hygiene." data-es="Productos de papel y pulpa de alta calidad, incluyendo impresión y publicaciones, cartón y papeles para empaques, así como tissue y papeles de higiene.">High-quality paper and pulp products for various industrial applications.</p>
+                        <p data-eng="High-quality paper and pulp products for various industrial applications." data-es="Productos de papel y pulpa de alta calidad para diversas aplicaciones industriales.">High-quality paper and pulp products for various industrial applications.</p>
                     </div>
                     <div class="industry-card animate-on-scroll">
                         <h3 data-eng="Food & Pharmaceutical Packaging" data-es="Embalaje de Alimentos y Productos Farmacéuticos">Food & Pharmaceutical Packaging</h3>
-                        <p data-eng="Comprehensive packaging solutions including rigid and flexible options for food and pharma solids, liquids and powders." data-es="Soluciones de empaque integrales, incluyendo opciones rígidas y flexibles para alimentos y productos farmacéuticos en sólidos, líquidos y polvos.">Comprehensive packaging solutions including rigid and flexible options.</p>
+                        <p data-eng="Comprehensive packaging solutions including rigid and flexible options." data-es="Soluciones de empaques completas, incluyendo opciones rígidas y flexibles, para alimenticio y farmaceuticos.">Comprehensive packaging solutions including rigid and flexible options.</p>
                     </div>
                     <div class="industry-card animate-on-scroll">
                         <h3 data-eng="Dairy Products" data-es="Productos Lácteos">Dairy Products</h3>
@@ -913,7 +884,7 @@ Our commitment is to deliver exceptional service and quality products combined w
                     </div>
                     <div class="industry-card animate-on-scroll">
                         <h3 data-eng="Lumber" data-es="Maderas">Lumber</h3>
-                        <p data-eng="Extensive range of lumber products sourced from leading Brazilian and global mills." data-es="Amplia gama de productos de madera provenientes de las principales fábricas Brasileñas y globales.">Extensive range of lumber products sourced from leading global mills.</p>
+                        <p data-eng="Extensive range of lumber products sourced from leading global mills." data-es="Amplia gama de productos de madera provenientes de las principales fábricas globales.">Extensive range of lumber products sourced from leading global mills.</p>
                     </div>
                 </div>
             </div>
@@ -926,7 +897,7 @@ Our commitment is to deliver exceptional service and quality products combined w
                     <div class="timeline-item animate-on-scroll">
                         <div class="timeline-content">
                             <h3 data-eng="1973" data-es="1973">1973</h3>
-                            <p data-eng="Founded by Mr. Juan Fernando Pichardo Lopez, initially focusing on pharmaceutical products." data-es="Fundada por el Sr. Juan Fernando Pichardo Lopez, inicialmente enfocada en productos farmacéuticos.">Founded by Mr. Juan Fernando Pichardo Lopez, initially focusing on pharmaceutical products.</p>
+                            <p data-eng="Founded by Mr. Juan Fernando Pichardo Lopez, initially focusing on pharmaceutical products." data-es="Fundada por el Sr. Juan Fernando Pichardo Lopez, inicialmente enfocada en productos farmacéuticos.">Founded by our grandfather, initially focusing on pharmaceutical products.</p>
                         </div>
                     </div>
                     <div class="timeline-item animate-on-scroll">
@@ -1007,23 +978,13 @@ Our commitment is to deliver exceptional service and quality products combined w
     </button>
     
     <script>
-        // Performance optimized - reduce initial DOM queries
-        const navbar = document.getElementById('navbar');
-        const languageToggle = document.getElementById('language-toggle');
-        const scrollTopBtn = document.getElementById('scroll-top');
-        const contactForm = document.getElementById('contact-form');
-        const elementsToTranslate = document.querySelectorAll('[data-eng], [data-es]');
-        
-        let currentLanguage = 'eng';
-        let ticking = false;
-
-        // Optimized smooth scrolling
+        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const offsetTop = target.offsetTop - 80;
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'
@@ -1032,37 +993,28 @@ Our commitment is to deliver exceptional service and quality products combined w
             });
         });
 
-        // Throttled scroll handler for better performance
-        function updateOnScroll() {
-            const scrollTop = window.pageYOffset;
+        // Navbar scroll effect
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            // Navbar effects
+            // Add scrolled class for styling
             if (scrollTop > 100) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
             
-            // Scroll to top button
-            if (scrollTop > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-            
-            ticking = false;
-        }
-
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(updateOnScroll);
-                ticking = true;
-            }
-        }
-
-        window.addEventListener('scroll', requestTick, { passive: true });
+            lastScrollTop = scrollTop;
+        });
 
         // Language toggle functionality
+        const languageToggle = document.getElementById('language-toggle');
+        const elementsToTranslate = document.querySelectorAll('[data-eng], [data-es]');
+        let currentLanguage = 'eng';
+
         languageToggle.addEventListener('click', () => {
             currentLanguage = currentLanguage === 'eng' ? 'es' : 'eng';
             
@@ -1074,12 +1026,23 @@ Our commitment is to deliver exceptional service and quality products combined w
                 }
             });
             
+            // Update button text
             languageToggle.innerHTML = currentLanguage === 'eng' ? 
                 '<i class="fas fa-globe"></i> ES | EN' : 
                 '<i class="fas fa-globe"></i> EN | ES';
         });
 
-        // Scroll to top
+        // Scroll-to-top button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -1087,51 +1050,33 @@ Our commitment is to deliver exceptional service and quality products combined w
             });
         });
 
-        // Much more aggressive intersection observer settings for fast loading
-        const fastObserverOptions = {
-            threshold: 0.05,  // Trigger much earlier
-            rootMargin: '100px 0px 0px 0px'  // Start animation when element is 100px from viewport
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
-        const fastObserver = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate');
-                    // Stop observing once animated for better performance
-                    fastObserver.unobserve(entry.target);
                 }
             });
-        }, fastObserverOptions);
+        }, observerOptions);
 
-        // Only observe elements that are not in initial viewport and on desktop
-        function setupAnimations() {
-            const isMobile = window.innerWidth <= 768;
-            
-            document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
-                const rect = el.getBoundingClientRect();
-                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-                
-                // On mobile or if element is in initial viewport, show immediately
-                if (isMobile || isInViewport) {
-                    el.classList.add('animate');
-                } else {
-                    // Only animate elements that are below the fold on desktop
-                    fastObserver.observe(el);
-                }
-            });
-        }
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+            // Add stagger delay
+            el.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(el);
+        });
 
-        // Initialize animations after DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', setupAnimations);
-        } else {
-            setupAnimations();
-        }
-
-        // Form submission with better UX
+        // Form submission (basic validation and feedback)
+        const contactForm = document.getElementById('contact-form');
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Basic form validation
             const formData = new FormData(this);
             const name = formData.get('name').trim();
             const email = formData.get('email').trim();
@@ -1145,6 +1090,7 @@ Our commitment is to deliver exceptional service and quality products combined w
                 return;
             }
             
+            // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert(currentLanguage === 'es' ? 
@@ -1153,6 +1099,7 @@ Our commitment is to deliver exceptional service and quality products combined w
                 return;
             }
             
+            // Simulate form submission
             const submitBtn = this.querySelector('.btn');
             const originalText = submitBtn.innerHTML;
             
@@ -1169,33 +1116,65 @@ Our commitment is to deliver exceptional service and quality products combined w
                 this.reset();
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 1500); // Reduced timeout for better UX
+            }, 2000);
         });
 
-        // Preload critical resources
-        const preloadLink = document.createElement('link');
-        preloadLink.rel = 'preload';
-        preloadLink.href = 'logo-no-background.png';
-        preloadLink.as = 'image';
-        document.head.appendChild(preloadLink);
-
-        // Remove loading delays
+        // Add loading animation to page
         window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
         });
 
-        // Optimize for reduced motion preferences
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.animate-on-scroll').forEach(el => {
-                el.classList.add('animate');
+        // Enhanced mobile menu (if needed later)
+        const mobileMenuToggle = () => {
+            // Implementation for mobile hamburger menu if needed
+        };
+
+        // Performance optimization: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
             });
         }
 
-        // Clean up observers on page unload
-        window.addEventListener('beforeunload', () => {
-            if (fastObserver) {
-                fastObserver.disconnect();
-            }
+        // Add active navigation state
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.pageYOffset >= sectionTop && 
+                    window.pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            // Update active nav link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
