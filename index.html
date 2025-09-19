@@ -266,6 +266,10 @@
         }
 
         nav ul {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            margin: 0 auto;
             top: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0.98);
@@ -289,6 +293,7 @@
         }
 
         nav ul li a {
+            white-space: nowrap;
             padding: 1rem 2rem;
             font-size: 1.2rem;
             border-bottom: none;
@@ -963,6 +968,7 @@
                 height: auto;
                 background: rgba(255,255,255,0.95);
                 backdrop-filter: blur(20px);
+                gap: 0.5rem;
             }
 
             nav ul li {
@@ -971,9 +977,10 @@
             }
 
             nav ul li a {
-                padding: 0.8rem 1rem;
-                font-size: 1rem;
+                padding: 0.5rem 0.8rem;
+                font-size: clamp(0.7rem, 2.5vw, 0.9rem); /* shrink text on small screens */
                 border-bottom: none;
+
             }
 
             .nav-toggle {
