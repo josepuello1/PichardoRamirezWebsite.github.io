@@ -262,7 +262,7 @@
         /* Mobile Navigation Styles */
         @media (max-width: 768px) {
         .nav-toggle {
-            display: flex; /* redundant, can remove */
+            /* display: flex; */ /* redundant, can remove */
         }
 
         nav ul {
@@ -959,18 +959,28 @@
             }
 
             nav ul {
-                flex-direction: column;
-                padding: 0;
+                position: relative;
+                flex-direction: row; /* horizontal */
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                background: rgba(255,255,255,0.95);
+                backdrop-filter: blur(20px);
             }
 
             nav ul li {
-                width: 100%;
-                text-align: center;
+                margin: 0 0.5rem;
+                width: auto;
             }
 
             nav ul li a {
-                padding: 1rem;
-                border-bottom: 1px solid var(--border);
+                padding: 0.8rem 1rem;
+                font-size: 1rem;
+                border-bottom: none;
+            }
+
+            .nav-toggle {
+                display: none; /* hide hamburger entirely */
             }
 
             /* Accordion mobile optimizations */
@@ -1620,30 +1630,6 @@ Our commitment is to deliver exceptional service and quality products combined w
             }
         }
 
-        // Mobile navigation toggle
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.querySelector('nav ul');
-
-        navToggle.addEventListener('click', () => {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a nav link
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
-        });
 
         addMaterialsToIndustry(0, [
             {name: '(HDPE) High Density Polyethylene Blow Molding'},
