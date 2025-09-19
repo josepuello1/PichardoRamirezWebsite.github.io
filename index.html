@@ -261,50 +261,155 @@
 
         /* Mobile Navigation Styles */
         @media (max-width: 768px) {
-        .nav-toggle {
-            /* display: flex; */ /* redundant, can remove */
+
+            nav ul {
+                display: flex;
+                flex-wrap: nowrap;
+                margin: 0;
+                top: 0;
+                justify-content: center;
+                transition: right 0.3s ease;
+                z-index: 1000;
+                overflow: hidden;
+                padding: 0 0.5rem;
+                width: 100vw;
+                position: relative;
+                flex-direction: row; /* horizontal */
+                align-items: center;
+                height: auto;
+                background: rgba(255,255,255,0.95);
+                backdrop-filter: blur(20px);
+                gap: 0.5rem;
+                box-sizing: border-box;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            nav ul li {
+                width: auto;
+                flex: 1 1 auto;
+                text-align: center;
+                margin: 0;
+                min-width: 0;
+            }
+
+            nav ul li a {
+                white-space: nowrap;
+                padding: 0.5rem 1rem;
+                font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+                border-bottom: none;
+                display: inline-block;
+                border-radius: 8px;
+            }
+
+            nav ul li a:hover {
+                background-color: var(--surface-accent);
+            }
+
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+            nav ul li {
+                margin: 0 0.5rem;
+                width: auto;
+            }
+
+            nav ul li a {
+                padding: 0.5rem 0.8rem;
+                font-size: clamp(0.7rem, 2.5vw, 0.9rem); /* shrink text on small screens */
+                border-bottom: none;
+
+            }
+
+            .nav-toggle {
+                display: none; /* hide hamburger entirely */
+            }
+
+            /* Accordion mobile optimizations */
+            .industry-accordion {
+                margin-top: 2rem;
+            }
+
+            .industry-header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .industry-title {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .industry-toggle {
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+                margin-left: 0;
+            }
+
+            .industry-content.active {
+                padding: 1rem 1.5rem;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 4rem;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-item:nth-child(even) {
+                margin-left: 0;
+                padding-left: 4rem;
+                padding-right: 0;
+            }
+
+            .timeline-item::before,
+            .timeline-item:nth-child(even)::before {
+                left: 1.5rem;
+                right: auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .value-props ul {
+                grid-template-columns: 1fr;
+            }
+
+            .language-toggle {
+                position: fixed;
+                top: 1rem;
+                right: 1rem;
+                z-index: 1001;
+            }
+
+            /* Mobile optimizations - remove animations on mobile for better performance */
+            .animate-on-scroll {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
         }
 
-        nav ul {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 1rem;
-            margin: 0 auto;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: right 0.3s ease;
-            z-index: 1000;
-            padding: 0;
-        }
-
-        nav ul.active {
-            right: 0;
-        }
-
-        nav ul li {
-            width: auto;
-            text-align: center;
-            margin: 1rem 0;
-        }
-
-        nav ul li a {
-            white-space: nowrap;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            border-bottom: none;
-            display: inline-block;
-            border-radius: 8px;
-        }
-
-        nav ul li a:hover {
-            background-color: var(--surface-accent);
-        }
-    }
 
         /* Hero Section */
 .hero-section {
@@ -951,120 +1056,6 @@
         }
 
         /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 4rem 1rem;
-            }
-
-            .section {
-                padding: 3rem 0;
-            }
-
-            nav ul {
-                position: relative;
-                flex-direction: row; /* horizontal */
-                justify-content: center;
-                align-items: center;
-                height: auto;
-                background: rgba(255,255,255,0.95);
-                backdrop-filter: blur(20px);
-                gap: 0.5rem;
-            }
-
-            nav ul li {
-                margin: 0 0.5rem;
-                width: auto;
-            }
-
-            nav ul li a {
-                padding: 0.5rem 0.8rem;
-                font-size: clamp(0.7rem, 2.5vw, 0.9rem); /* shrink text on small screens */
-                border-bottom: none;
-
-            }
-
-            .nav-toggle {
-                display: none; /* hide hamburger entirely */
-            }
-
-            /* Accordion mobile optimizations */
-            .industry-accordion {
-                margin-top: 2rem;
-            }
-
-            .industry-header {
-                padding: 1rem 1.5rem;
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-            }
-
-            .industry-title {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-
-            .industry-toggle {
-                position: absolute;
-                top: 1rem;
-                right: 1.5rem;
-                margin-left: 0;
-            }
-
-            .industry-content.active {
-                padding: 1rem 1.5rem;
-            }
-
-            .materials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::before {
-                left: 2rem;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 4rem;
-                padding-right: 0;
-                justify-content: flex-start;
-            }
-
-            .timeline-item:nth-child(even) {
-                margin-left: 0;
-                padding-left: 4rem;
-                padding-right: 0;
-            }
-
-            .timeline-item::before,
-            .timeline-item:nth-child(even)::before {
-                left: 1.5rem;
-                right: auto;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .value-props ul {
-                grid-template-columns: 1fr;
-            }
-
-            .language-toggle {
-                position: fixed;
-                top: 1rem;
-                right: 1rem;
-                z-index: 1001;
-            }
-
-            /* Mobile optimizations - remove animations on mobile for better performance */
-            .animate-on-scroll {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
-        }
 
         @media (max-width: 480px) {
             .container {
