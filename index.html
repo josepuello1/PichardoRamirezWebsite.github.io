@@ -148,7 +148,7 @@
             box-shadow: var(--shadow);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
             transition: all 0.3s ease;
         }
 
@@ -262,17 +262,10 @@
         /* Mobile Navigation Styles */
         @media (max-width: 768px) {
             
-            nav {
-                position: sticky;       /* always fixed */
-                top: 0;
-                left: 0;
-                width: 100vw;          /* full width */
-                z-index: 9999;
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(20px);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            nav{
+                position: sticky;
             }
-
+            
             nav ul {
                 display: flex;
                 flex-wrap: nowrap;
@@ -284,7 +277,7 @@
                 z-index: 9999;
                 overflow: hidden;
                 padding: 0 0.5rem;
-                width: 100%a;
+                width: 100%;
                 position: fixed;
                 flex-direction: row; /* horizontal */
                 align-items: center;
