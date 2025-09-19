@@ -104,6 +104,18 @@
             transform: scale(1.02);
         }
 
+        @media (max-width: 768px) {
+            header {
+                min-height: 120px; /* adjust if needed */
+                padding: 1.5rem 1rem;
+            }
+
+            .logo-container img {
+                max-height: 30%; /* logo will not exceed 30% of header height */
+                width: auto;     /* maintain aspect ratio */
+            }
+        }
+
         .language-toggle {
             position: absolute;
             top: 1rem;
