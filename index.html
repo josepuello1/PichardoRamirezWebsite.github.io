@@ -60,12 +60,18 @@
 
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            background: url(port.jpg);
+            background-size: cover;
+            background-position: center;
             padding: 2rem 1rem;
             color: white;
             text-align: center;
             position: relative;
             overflow: hidden;
+            display: flex; /* use flex to align items */
+            justify-content: space-between; /* logo left, language toggle right */
+            align-items: flex-start; /* align items to top */
+            min-height: 120px; /* optional, adjust header height */
         }
 
         header::before {
@@ -75,7 +81,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>');
+            /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>'); */
             pointer-events: none;
         }
 
@@ -86,7 +92,9 @@
         }
 
         .logo-container img {
-            max-width: min(500px, 90vw);
+            /* max-width: min(500px, 90vw); */
+            max-width: 300px;
+            display: block;
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
             transition: transform 0.3s ease;
@@ -1054,7 +1062,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="logo-no-background.png" class="logo" alt="Pichardo, Ramirez & Co., SRL - Industrial Trade Representatives">
+            <img src="logo-no-background1.png" class="logo" alt="Pichardo, Ramirez & Co., SRL - Industrial Trade Representatives">
         </div>
         <button class="language-toggle" id="language-toggle">
             <i class="fas fa-globe"></i> ES | EN
@@ -1116,7 +1124,7 @@ Our commitment is to deliver exceptional service and quality products combined w
 
         <section id="industries" class="section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll" data-eng="Industries We Serve" data-es="Industrias Que Servimos">Industries We Serve</h2>
+                <h2 class="section-title animate-on-scroll" data-eng="Products and Industries We Serve" data-es="Materiales e Industrias Que Servimos">Products and Industries We Serve</h2>
                 <div class="industry-accordion">
                     <div class="industry-item animate-on-scroll">
                         <div class="industry-header" onclick="toggleIndustry(this)">
