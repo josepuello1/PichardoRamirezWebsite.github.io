@@ -283,6 +283,23 @@
         nav ul li a:hover {
             background-color: var(--surface-accent);
         }
+
+        /* Keep the nav container visible on mobile initially */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        nav.mobile-hidden .nav-container {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        nav.mobile-hidden .nav-toggle {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
         /* Hero Section */
