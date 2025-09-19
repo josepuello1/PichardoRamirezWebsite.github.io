@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pichardo, Ramirez & Co., SRL has been connecting global manufacturers with local industries in the Dominican Republic since 1973. Explore our expertise in plastic resins, glass solutions, Agrochemicals, crop protection, food packaging, pharmaceutical glass, lumber, steel, construction glass, and more.">
+    <title>Pichardo, Ramirez & Co., SRL - Leading Industrial Trade Representatives in the Dominican Republic</title>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pichardo, Ramirez & Co., SRL",
+        "url": "https://www.pichardoramirez.com",
+        "logo": "https://www.pichardoramirez.com/logo-no-background.png",
+        "description": "Leading industrial trade representatives in the Dominican Republic since 1973, connecting global manufacturers with local industry."
+    }
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0a0a0a;          /* Pure deep black - maximum sophistication */
+            --secondary-color: #1a1a1a;       /* Rich charcoal - premium depth */
+            --tertiary-color: #2a2a2a;        /* Dark slate - layered elegance */
+            --accent-color: #00d4ff;          /* Electric cyan - modern tech accent */
+            --accent-secondary: #ff6b35;      /* Warm orange - energy and trust */
+            --accent-gold: #ffd700;           /* Premium gold - luxury highlight */
+            --text-primary: #ffffff;          /* Pure white - maximum contrast */
+            --text-secondary: #e0e0e0;        /* Light gray - readable secondary */
+            --text-muted: #a0a0a0;            /* Medium gray - subtle information */
+            --text-accent: #00d4ff;           /* Cyan for interactive elements */
+            --surface-dark: #0f0f0f;          /* Deep surface - cards and sections */
+            --surface-medium: #1f1f1f;        /* Medium surface - elevated elements */
+            --surface-light: #2f2f2f;         /* Light surface - form elements */
+            --border-dark: #333333;           /* Subtle borders */
+            --border-accent: #00d4ff33;       /* Glowing accent borders */
+            --shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.4);
+            --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.15);
+            --shadow-intense: 0 8px 32px rgba(0, 0, 0, 0.6);
+            --gradient-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            --gradient-surface: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-color);
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--gradient-primary);
+            padding: 2rem 1rem;
+            color: var(--text-primary);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .logo-container {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .logo-container img {
+            max-width: min(500px, 90vw);
+            height: auto;
+            filter: drop-shadow(0 4px 16px rgba(0, 212, 255, 0.3)) brightness(1.1);
+            transition: all 0.3s ease;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0 6px 20px rgba(0, 212, 255, 0.4)) brightness(1.2);
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--surface-medium);
+            backdrop-filter: blur(20px);
+            padding: 0.7rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            color: var(--text-primary);
+            border: 1px solid var(--border-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-dark);
+            z-index: 10;
+        }
+
+        .language-toggle:hover {
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-color);
+        }
+
+        /* Navigation Styles */
+        nav {
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        nav.scrolled {
+            box-shadow: var(--shadow-intense);
+            background: rgba(10, 10, 10, 0.98);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        nav ul li a:hover::before {
+            left: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+            background-color: var(--surface-dark);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        nav ul li a:hover::after {
+            width: 80%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 0%, #00d4ff 50%, #ffffff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 2.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-glow);
+            border: 1px solid var(--accent-color);
+        }
+
+        .hero-cta:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .hero-cta i {
+            transition: transform 0.3s ease;
+        }
+
+        .hero-cta:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 600;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        /* About Section */
+        #about {
+            background: var(--secondary-color);
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .value-props {
+            text-align: left;
+        }
+
+        .value-props h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .value-props ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-props li {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--gradient-surface);
+            border-radius: 12px;
+            box-shadow: var(--shadow-dark);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-dark);
+        }
+
+        .value-props li::before {
+            content: '✓';
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .value-props li:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-color);
+        }
+
+        /* Industries Section - Accordion Layout */
+        .industry-accordion {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .industry-item {
+            background: var(--surface-dark);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-dark);
+            border: 1px solid var(--border-dark);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .industry-item:hover {
+            box-shadow: var(--shadow-glow);
+            border-color: var(--border-accent);
+        }
+
+        .industry-header {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--surface-dark);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .industry-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        .industry-header:hover::before {
+            transform: scaleX(1);
+        }
+
+        .industry-header:hover {
+            background: var(--surface-medium);
+        }
+
+        .industry-header.active {
+            background: var(--surface-medium);
+        }
+
+        .industry-header.active::before {
+            transform: scaleX(1);
+        }
+
+        .industry-title {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .industry-title h3 {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .industry-title p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .industry-toggle {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .industry-header.active .industry-toggle {
+            transform: rotate(180deg);
+        }
+
+        .industry-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            background: var(--tertiary-color);
+        }
+
+        .industry-content.active {
+            max-height: 2000px;
+            padding: 1.5rem 2rem;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .material-item {
+            background: var(--surface-dark);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+            box-shadow: var(--shadow-dark);
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-dark);
+        }
+
+        .material-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-color);
+        }
+
+        .material-item h4 {
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .material-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .placeholder-text {
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+            padding: 2rem;
+        }
+
+        /* Legacy Section */
+        .legacy-section {
+            background: var(--gradient-surface);
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient-accent);
+            transform: translateX(-50%);
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 2rem;
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            justify-content: flex-start;
+            padding-left: 2rem;
+            padding-right: 0;
+            margin-left: 50%;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: -1rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--accent-color);
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -1rem;
+            right: auto;
+        }
+
+        .timeline-content {
+            background: var(--surface-dark);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-dark);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-dark);
+        }
+
+        .timeline-item:hover .timeline-content {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-color);
+        }
+
+        .timeline-content h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--primary-color);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--surface-dark);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-dark);
+        }
+
+        .contact-detail-item:hover {
+            background: var(--surface-medium);
+            transform: translateX(5px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-color);
+        }
+
+        .contact-detail-item i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            width: 1.5rem;
+        }
+
+        .contact-form {
+            background: var(--surface-dark);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-intense);
+            border: 1px solid var(--border-dark);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-dark);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: var(--surface-light);
+            color: var(--text-primary);
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+            background: var(--surface-medium);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-glow);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--text-secondary);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Optimized Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Fast-loading animation class */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.2s ease-out;
+        }
+
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Critical content - always visible for above-the-fold content */
+        .critical-content {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Reduced motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-on-scroll {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 1rem;
+                border-bottom: 1px solid var(--border-dark);
+            }
+
+            /* Accordion mobile optimizations */
+            .industry-accordion {
+                margin-top: 2rem;
+            }
+
+            .industry-header {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .industry-title {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .industry-toggle {
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+                margin-left: 0;
+            }
+
+            .industry-content.active {
+                padding: 1rem 1.5rem;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 4rem;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-item:nth-child(even) {
+                margin-left: 0;
+                padding-left: 4rem;
+                padding-right: 0;
+            }
+
+            .timeline-item::before,
+            .timeline-item:nth-child(even)::before {
+                left: 1.5rem;
+                right: auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .value-props ul {
+                grid-template-columns: 1fr;
+            }
+
+            .language-toggle {
+                position: fixed;
+                top: 1rem;
+                right: 1rem;
+                z-index: 1001;
+            }
+
+            /* Mobile optimizations - remove animations on mobile for better performance */
+            .animate-on-scroll {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-section,
+            .section {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .industry-card,
+            .timeline-content,
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo-white.png" class="logo" alt="Pichardo, Ramirez & Co., SRL - Industrial Trade Representatives">
+        </div>
+        <button class="language-toggle" id="language-toggle">
+            <i class="fas fa-globe"></i> ES | EN
+        </button>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home" data-eng="Home" data-es="Inicio">Home</a></li>
+            <li><a href="#about" data-eng="About Us" data-es="Sobre Nosotros">About Us</a></li>
+            <li><a href="#industries" data-eng="Industries" data-es="Industrias">Industries</a></li>
+            <li><a href="#legacy" data-eng="Our Legacy" data-es="Nuestro Legado">Our Legacy</a></li>
+            <li><a href="#contact" data-eng="Contact" data-es="Contacto">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section critical-content" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title" data-eng="Your Trusted Partner in Trade in the Dominican Republic Since 1973" data-es="Su Socio Confiable en el Comercio en Republica Dominicana Desde 1973">Your Trusted Partner in Trade in the Dominican Republic Since 1973</h1>
+            <p class="hero-subtitle" data-eng="Connecting international manufacturers with Dominican industry through decades of expertise and trusted relationships" data-es="Conectando fabricantes internacionales con la industria dominicana a través de décadas de experiencia y relaciones de confianza">Connecting international manufacturers with Dominican industry through decades of expertise and trusted relationships</p>
+            <a href="#contact" class="hero-cta" data-eng="Get in Touch" data-es="Contáctanos">
+                <span>Get in Touch</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-eng="About Us" data-es="Sobre Nosotros">About Us</h2>
+                <div class="about-content">
+                    <p class="about-description animate-on-scroll" data-eng="Since 1973, Pichardo, Ramirez & Co., SRL has been a trusted leader in industrial trade within the Dominican Republic. We specialize in bridging the gap between world-class manufacturers and local industries, acting as the reliable representative and strategic partner for global suppliers.<br><br>
+Our commitment is to deliver exceptional service and quality products combined with competitive pricing, ensuring our clients consistently choose us as their preferred partner for sourcing industrial materials. With decades of experience and deep market insight, we drive value and growth for both manufacturers and businesses across the region." data-es="Desde 1973, Pichardo, Ramirez & Co., SRL se ha consolidado como un referente confiable en el comercio industrial en la República Dominicana. Nos especializamos en conectar a fabricantes de clase mundial con las industrias locales, actuando como representantes estratégicos y aliados confiables para proveedores globales.<br><br>Nuestro compromiso es ofrecer productos de calidad excepcional, combinados con precios competitivos, asegurando que nuestros clientes nos elijan siempre como su socio preferido para el abastecimiento de materiales industriales. Con décadas de experiencia y un profundo conocimiento del mercado, impulsamos el valor y crecimiento tanto para fabricantes como para negocios en la región.">
+                        Since 1973, Pichardo, Ramirez & Co., SRL has been a trusted leader in industrial trade within the Dominican Republic. We specialize in bridging the gap between world-class manufacturers and local industries, acting as the reliable representative and strategic partner for global suppliers.<br><br>Our commitment is to deliver exceptional service and quality products combined with competitive pricing, ensuring our clients consistently choose us as their preferred partner for sourcing industrial materials. With decades of experience and deep market insight, we drive value and growth for both manufacturers and businesses across the region.
+                    </p>
+                    
+                    <div class="value-props animate-on-scroll">
+                        <h3 data-eng="Why Choose Us" data-es="Por Qué Elegirnos">Why Choose Us</h3>
+                        <ul>
+                            <li data-eng="50+ years of global and local market expertise" data-es="Más de 50 años de experiencia en el mercado global y local">50+ years of market expertise</li>
+                            <li data-eng="Deep understanding of international and local business culture" data-es="Profundo conocimiento de la cultura empresarial global y local">Deep understanding of global and local business culture</li>
+                            <li data-eng="Aligned with securing mutually profitable outcomes for all parties involved" data-es="Comprometidos a lograr resultados mutuamente rentables para todas las partes involucradas.">Committed to securing mutually profitable outcomes for all parties involved</li>
+                            <li data-eng="Extensive network of global suppliers and local customers" data-es="Amplia red de proveedores globales y clientes locales">Extensive network of global suppliers and local customers</li>
+                            <li data-eng="Comprehensive support including industry knowledge, leads, sales, sourcing, logistics and payment processing" data-es="Soporte integral que incluye conocimiento del sector, generación de contactos, ventas, abastecimiento, logística y procesamiento de pagos.">Comprehensive support including industry knowledge, leads, sales, sourcing, logistics and payment processing</li>
+                            <li data-eng="Multi-generational commitment to excellence" data-es="Compromiso multigeneracional con la excelencia">Multi-generational commitment to excellence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="industries" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-eng="Industries We Serve" data-es="Industrias Que Servimos">Industries We Serve</h2>
+                <div class="industry-accordion">
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Industrial Resins" data-es="Resinas Industriales">Industrial Resins</h3>
+                                <p data-eng="Comprehensive range of plastic resins including PE, PP, PS, PVC, PET and others from trusted global suppliers." data-es="Amplia gama de resinas plásticas, incluyendo PE, PP, PS, PVC, PET y otros de proveedores globales de confianza.">Comprehensive range of plastic resins including PE, PP, PS, PVC, PET and others from trusted global suppliers.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Material specifications and suppliers will be added here." data-es="Las especificaciones de materiales y proveedores se agregarán aquí.">Material specifications and suppliers will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Printing and Packaging Paper and Boards" data-es="Papales y Cartones">Printing and Packaging Paper and Boards</h3>
+                                <p data-eng="High-quality paper and pulp products, including Printing and Publishing, Paperboard and Packaging papers, Tissue & Hygiene." data-es="Productos de papel y pulpa de alta calidad, incluyendo impresión y publicaciones, cartón y papeles para empaques, así como tissue y papeles de higiene.">High-quality paper and pulp products, including Printing and Publishing, Paperboard and Packaging papers, Tissue & Hygiene.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Paper and pulp product specifications will be added here." data-es="Las especificaciones de productos de papel y pulpa se agregarán aquí.">Paper and pulp product specifications will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Chemicals and Specialties" data-es="Químicos y Especialidades">Chemicals and Specialties</h3>
+                                <p data-eng="We supply a comprehensive range of industrial chemicals and specialties—solvents, silicas, acids, alkalis, , plasticizer, alcohols, glycols, acrylates, monomers, and intermediates" data-es="Suministramos una amplia gama de productos químicos y especialidades industriales: disolventes, silicas, ácidos, álcalis, plastificantes, alcoholes, glicoles, acrilatos, monómeros e intermedios.">We supply a comprehensive range of industrial chemicals and specialties—solvents, silicas, acids, alkalis, plasticizer, alcohols, glycols, acrylates, monomers, and intermediates.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Chemical product details and specifications will be added here." data-es="Los detalles y especificaciones de productos químicos se agregarán aquí.">Chemical product details and specifications will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Glass Solutions" data-es="Soluciones de Vidrio">Glass Solutions</h3>
+                                <p data-eng="Exclusive representatives of Saint-Gobain France, providing premium glass solutions." data-es="Representantes exclusivos de Saint-Gobain Francia, proporcionando soluciones de vidrio premium.">Exclusive representatives of Saint-Gobain France, providing premium glass solutions.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Glass product specifications and applications will be added here." data-es="Las especificaciones y aplicaciones de productos de vidrio se agregarán aquí.">Glass product specifications and applications will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Crop Protection & Plant Nutrition" data-es="Protección de Cultivos y Nutrición de Plantas">Crop Protection & Plant Nutrition</h3>
+                                <p data-eng="Agricultural solutions for enhanced crop yields and plant health." data-es="Soluciones agrícolas para mejorar los rendimientos de los cultivos y la salud de las plantas.">Agricultural solutions for enhanced crop yields and plant health.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Agricultural product information and specifications will be added here." data-es="La información y especificaciones de productos agrícolas se agregarán aquí.">Agricultural product information and specifications will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Food & Pharmaceutical Packaging" data-es="Embalaje de Alimentos y Productos Farmacéuticos">Food & Pharmaceutical Packaging</h3>
+                                <p data-eng="Comprehensive packaging solutions including rigid and flexible options for food and pharma solids, liquids and powders." data-es="Soluciones de empaque integrales, incluyendo opciones rígidas y flexibles para alimentos y productos farmacéuticos en sólidos, líquidos y polvos.">Comprehensive packaging solutions including rigid and flexible options for food and pharma solids, liquids and powders.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Packaging solution details and specifications will be added here." data-es="Los detalles y especificaciones de soluciones de empaque se agregarán aquí.">Packaging solution details and specifications will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Dairy Products" data-es="Productos Lácteos">Dairy Products</h3>
+                                <p data-eng="Premium dairy ingredients including whey powder, lactose, milk powders, and protein concentrates." data-es="Ingredientes y derivadeos lácteos premium que incluyen suero de leche en polvo, lactosa, leche descremada y entera en polvo, concentrados y asilados de proteína.">Premium dairy ingredients including whey powder, lactose, milk powders, and protein concentrates.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Dairy product specifications and sourcing information will be added here." data-es="Las especificaciones de productos lácteos e información de abastecimiento se agregarán aquí.">Dairy product specifications and sourcing information will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Industrial Machinery" data-es="Maquinaria Industrial">Industrial Machinery</h3>
+                                <p data-eng="Specialized packaging and processing equipment for various industries." data-es="Maquinas automatizadoras de lineas de produccion">Specialized packaging and processing equipment for various industries.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Machinery specifications and equipment details will be added here." data-es="Las especificaciones de maquinaria y detalles de equipos se agregarán aquí.">Machinery specifications and equipment details will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Steel & Metals" data-es="Acero y Metales">Steel & Metals</h3>
+                                <p data-eng="Extensive range of steel and metal products sourced from leading global mills." data-es="Amplia gama de productos de acero y metales provenientes de las principales fábricas globales.">Extensive range of steel and metal products sourced from leading global mills.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Steel and metal product specifications will be added here." data-es="Las especificaciones de productos de acero y metales se agregarán aquí.">Steel and metal product specifications will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="industry-item animate-on-scroll">
+                        <div class="industry-header" onclick="toggleIndustry(this)">
+                            <div class="industry-title">
+                                <h3 data-eng="Lumber" data-es="Maderas">Lumber</h3>
+                                <p data-eng="Extensive range of lumber products sourced from leading Brazilian and global mills." data-es="Amplia gama de productos de madera provenientes de las principales fábricas Brasileñas y globales.">Extensive range of lumber products sourced from leading Brazilian and global mills.</p>
+                            </div>
+                            <i class="fas fa-chevron-down industry-toggle"></i>
+                        </div>
+                        <div class="industry-content">
+                            <div class="placeholder-text">
+                                <p data-eng="Lumber product specifications and sourcing information will be added here." data-es="Las especificaciones de productos de madera e información de abastecimiento se agregarán aquí.">Lumber product specifications and sourcing information will be added here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="legacy" class="legacy-section section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-eng="Our Legacy" data-es="Nuestro Legado">Our Legacy</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <h3 data-eng="1973" data-es="1973">1973</h3>
+                            <p data-eng="Founded by Mr. Juan Fernando Pichardo Lopez, initially focusing on pharmaceutical products." data-es="Fundada por el Sr. Juan Fernando Pichardo Lopez, inicialmente enfocada en productos farmacéuticos.">Founded by Mr. Juan Fernando Pichardo Lopez, initially focusing on pharmaceutical products.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <h3 data-eng="1970s-1980s" data-es="1970s-1980s">1970s-1980s</h3>
+                            <p data-eng="Second generation joined. Expanded into industrial materials, partnering with major U.S. and European manufacturers." data-es="Se expandió con la segunda generación hacia materiales industriales, asociándose con importantes fabricantes de EE.UU. y Europa.">Second generation joined. Expanded into industrial materials, partnering with major U.S. and European manufacturers.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <h3 data-eng="1990s-2000s" data-es="1990s-2000s">1990s-2000s</h3>
+                            <p data-eng="Broadening of our industry reach and strengthening international partnerships." data-es="Ampliacion de nuestro alcance industrial y fortalecimiento de nuestras asociaciones internacionales.">Broadening of our industry reach and strengthening international partnerships.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll">
+                        <div class="timeline-content">
+                            <h3 data-eng="Present Day" data-es="Día Presente">2010s-Present Day</h3>
+                            <p data-eng="Third generation continuing our legacy of trust and excellence in global trade." data-es="La tercera generación continúa nuestro legado de confianza y excelencia en el comercio global.">Third generation continuing our legacy of trust and excellence in global trade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact-section section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll" data-eng="Contact Us" data-es="Contáctanos">Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-info animate-on-scroll">
+                        <h3 data-eng="Get in Touch" data-es="Póngase en Contacto">Get in Touch</h3>
+                        <p data-eng="Let us help you solve your industrial materials needs with the right approach." data-es="Déjenos ayudarle a solucionar sus necesiades de materiales industriales.">Let us help you solve your industrial materials needs with the right approach.</p>
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-eng="Santo Domingo, Dominican Republic" data-es="Santo Domingo, República Dominicana">Santo Domingo, Dominican Republic</span>
+                            </div>
+                            <div class="contact-detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span data-eng="info@pichardoramirez.com" data-es="info@pichardoramirez.com">info@pichardoramirez.com</span>
+                            </div>
+                            <div class="contact-detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span data-eng="+1 (809) XXX-XXXX" data-es="+1 (809) XXX-XXXX">+1 (809) XXX-XXXX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form animate-on-scroll" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Company Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="How can we help you?" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">
+                            <span data-eng="Send Message" data-es="Enviar Mensaje">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Pichardo, Ramirez & Co., SRL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <script>
+        // Performance optimized - reduce initial DOM queries
+        const navbar = document.getElementById('navbar');
+        const languageToggle = document.getElementById('language-toggle');
+        const scrollTopBtn = document.getElementById('scroll-top');
+        const contactForm = document.getElementById('contact-form');
+        const elementsToTranslate = document.querySelectorAll('[data-eng], [data-es]');
+        
+        let currentLanguage = 'eng';
+        let ticking = false;
+
+        // Optimized smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Throttled scroll handler for better performance
+        function updateOnScroll() {
+            const scrollTop = window.pageYOffset;
+            
+            // Navbar effects
+            if (scrollTop > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Scroll to top button
+            if (scrollTop > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+            
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick, { passive: true });
+
+        // Language toggle functionality
+        languageToggle.addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'eng' ? 'es' : 'eng';
+            
+            elementsToTranslate.forEach(element => {
+                if (currentLanguage === 'es' && element.dataset.es) {
+                    element.innerHTML = element.dataset.es;
+                } else if (currentLanguage === 'eng' && element.dataset.eng) {
+                    element.innerHTML = element.dataset.eng;
+                }
+            });
+            
+            languageToggle.innerHTML = currentLanguage === 'eng' ? 
+                '<i class="fas fa-globe"></i> ES | EN' : 
+                '<i class="fas fa-globe"></i> EN | ES';
+        });
+
+        // Scroll to top
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Much more aggressive intersection observer settings for fast loading
+        const fastObserverOptions = {
+            threshold: 0.05,  // Trigger much earlier
+            rootMargin: '100px 0px 0px 0px'  // Start animation when element is 100px from viewport
+        };
+
+        const fastObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    // Stop observing once animated for better performance
+                    fastObserver.unobserve(entry.target);
+                }
+            });
+        }, fastObserverOptions);
+
+        // Only observe elements that are not in initial viewport and on desktop
+        function setupAnimations() {
+            const isMobile = window.innerWidth <= 768;
+            
+            document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+                const rect = el.getBoundingClientRect();
+                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                // On mobile or if element is in initial viewport, show immediately
+                if (isMobile || isInViewport) {
+                    el.classList.add('animate');
+                } else {
+                    // Only animate elements that are below the fold on desktop
+                    fastObserver.observe(el);
+                }
+            });
+        }
+
+        // Initialize animations after DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', setupAnimations);
+        } else {
+            setupAnimations();
+        }
+
+        // Form submission with better UX
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name').trim();
+            const email = formData.get('email').trim();
+            const company = formData.get('company').trim();
+            const message = formData.get('message').trim();
+            
+            if (!name || !email || !company || !message) {
+                alert(currentLanguage === 'es' ? 
+                    'Por favor complete todos los campos.' : 
+                    'Please fill in all fields.');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert(currentLanguage === 'es' ? 
+                    'Por favor ingrese un correo electrónico válido.' : 
+                    'Please enter a valid email address.');
+                return;
+            }
+            
+            const submitBtn = this.querySelector('.btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = currentLanguage === 'es' ? 
+                '<i class="fas fa-spinner fa-spin"></i> Enviando...' : 
+                '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert(currentLanguage === 'es' ? 
+                    '¡Mensaje enviado exitosamente! Nos pondremos en contacto con usted pronto.' : 
+                    'Message sent successfully! We will contact you soon.');
+                
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500); // Reduced timeout for better UX
+        });
+
+        // Preload critical resources
+        const preloadLink = document.createElement('link');
+        preloadLink.rel = 'preload';
+        preloadLink.href = 'logo-no-background.png';
+        preloadLink.as = 'image';

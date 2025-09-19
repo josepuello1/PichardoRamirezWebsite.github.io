@@ -22,18 +22,22 @@
 
     <style>
         :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2563eb;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
+            --primary-color: #1e293b;        /* Deep slate - sophisticated, trustworthy */
+            --secondary-color: #0f172a;      /* Darker slate - premium, authoritative */
+            --accent-color: #dc2626;         /* Strategic red - international business, action */
+            --accent-secondary: #059669;     /* Forest green - growth, stability */
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --text-muted: #94a3b8;
             --surface: #ffffff;
             --surface-secondary: #f8fafc;
             --surface-accent: #f1f5f9;
-            --border: #e5e7eb;
-            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --surface-dark: #334155;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            --shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+            --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+            --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
         }
 
         * {
@@ -475,7 +479,7 @@
         }
 
         .industry-content.active {
-            max-height: 5000px;
+            max-height: 2000px; /* Increased from 500px to accommodate more items */
             padding: 1.5rem 2rem;
         }
 
@@ -980,7 +984,7 @@ Our commitment is to deliver exceptional service and quality products combined w
                     </p>
                     
                     <div class="value-props animate-on-scroll">
-                        <h3 data-eng="Why Choose Us" data-es="Por Qué Elegirnos">Why Choose Us</h3>
+                        <h3 data-eng="Why work with Us" data-es="Por Qué Elegirnos">Why Work With Us</h3>
                         <ul>
                             <li data-eng="50+ years of global and local market expertise" data-es="Más de 50 años de experiencia en el mercado global y local">50+ years of market expertise</li>
                             <li data-eng="Deep understanding of international and local business culture" data-es="Profundo conocimiento de la cultura empresarial global y local">Deep understanding of global and local business culture</li>
@@ -1439,7 +1443,9 @@ Our commitment is to deliver exceptional service and quality products combined w
             document.querySelectorAll('.industry-header').forEach(otherHeader => {
                 if (otherHeader !== header) {
                     otherHeader.classList.remove('active');
-                    otherHeader.nextElementSibling.classList.remove('active');
+                    const otherContent = otherHeader.nextElementSibling;
+                    otherContent.classList.remove('active');
+                    otherContent.style.maxHeight = '0px';
                 }
             });
             
@@ -1447,14 +1453,17 @@ Our commitment is to deliver exceptional service and quality products combined w
             if (isActive) {
                 header.classList.remove('active');
                 content.classList.remove('active');
+                content.style.maxHeight = '0px';
             } else {
                 header.classList.add('active');
                 content.classList.add('active');
+                // Dynamically set max-height based on actual content height
+                content.style.maxHeight = content.scrollHeight + 'px';
             }
         }
 
         // Add sample material data function (for future use)
-        function addMaterialsToIndustry(industryIndex, materialsData) {
+       function addMaterialsToIndustry(industryIndex, materialsData) {
             const industryItems = document.querySelectorAll('.industry-item');
             if (industryItems[industryIndex]) {
                 const content = industryItems[industryIndex].querySelector('.industry-content');
@@ -1490,32 +1499,63 @@ Our commitment is to deliver exceptional service and quality products combined w
 
         addMaterialsToIndustry(1, [
             {name: 'Bleached Semi-Extensible Sack Kraft'}, 
+            {name: 'Bond Paper'},
             {name: 'Butter Wrap Paper'}, 
             {name: 'C1S / C2S'}, 
             {name: 'Carbonless Paper'}, 
             {name: 'Carrier Board'}, 
             {name: 'CCKB - Clay coated kraft'}, 
             {name: 'Cigarette Packaging Paper'}, 
-            {name: 'Clay Coated News Board.'}, 
+            {name: 'Clay Coated News Board (CCNB)'}, 
             {name: 'Coasterboard'}, 
             {name: 'Coated Folding Box Board (FBB, GC1)'}, 
             {name: 'Coated Kraftback Board'}, 
+            {name: 'Coated Whiteback Board'},
             {name: 'Coffee Filter Paper'}, 
             {name: 'Core Board'}, 
             {name: 'Duplex Board'}, 
+            {name: 'Fluting'},
             {name: 'Golden Kraft'}, 
-            {name: 'Greaseproof Board'}, 
+            {name: 'Greaseproof Paper & Board'}, 
             {name: 'Grey Board'}, 
             {name: 'Kraft Liner / Kraft Paper'}, 
             {name: 'Laid paper'}, 
             {name: 'Manila Folder'}, 
+            {name: 'MF Unbleached Kraft Paper'},
+            {name: 'MG Unbleached Kraft Paper'},
+            {name: 'MG Bleached Kraft Paper'},
+            {name: 'MG Bleached Tissue Paper'},
+            {name: 'Napkin Paper'},
             {name: 'Security paper'}, 
             {name: 'Testliner'}, 
+            {name: 'Thermal Paper'},
+            {name: 'Toiltet Tissue Paper'},
+            {name: 'Towel Tissue Paper'},
+            {name: 'Two Side Coated Woodfree Paper'},
+            {name: 'Uncoated Woodfree Paper'},
             {name: 'Unbleached Semi-Extensible Sack Kraft'}, 
             {name: 'Wet Strength Carrier Board'}, 
             {name: 'White Opaline'}
         ]);
-        
+
+        addMaterialsToIndustry(2, [
+            {name: 'Toluene Diisocyanate'},
+            {name: 'Sodium Silicate'},
+            {name: 'Sodium Metasilicate Penta'},
+            {name: 'Caustic Soda Liquid'},
+            {name: 'DOTP (Dioctyl Terephthalate)'},
+            {name: 'DOP (Dioctyl Phthalate)'},
+            {name: 'Caustic Potash Flakes'},
+            {name: 'Potassium Carbonate'},
+            {name: 'Hydrochloric Acid'},
+            {name: 'Sodium Silicate + Sodium Metasilicate'},
+            {name: 'Tablet and Granular Industrial Water Treatment'},
+            {name: 'Filtration Earths, Bleaching Earths'},
+            {name: 'Silica & Silica Gel'},
+            {name: 'Phenolic Resin'},
+            {name: 'Coating Fat (Cocoa Butter Replacement)'}
+        ])
+
         // Example usage (you can call this function later to add materials):
         // addMaterialsToIndustry(0, [
         //     {name: 'LDPE', description: 'Low-density polyethylene for film applications'},
