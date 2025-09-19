@@ -262,8 +262,16 @@
         /* Mobile Navigation Styles */
         @media (max-width: 768px) {
             
-
-            
+            nav {
+                position: sticky;       /* always fixed */
+                top: 0;
+                left: 0;
+                width: 100vw;          /* full width */
+                z-index: 9999;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
 
             nav ul {
                 display: flex;
@@ -277,7 +285,7 @@
                 overflow: hidden;
                 padding: 0 0.5rem;
                 width: 100%a;
-                position: sticky;
+                position: fixed;
                 flex-direction: row; /* horizontal */
                 align-items: center;
                 height: auto;
@@ -285,7 +293,6 @@
                 backdrop-filter: blur(20px);
                 gap: 0.5rem;
                 box-sizing: border-box;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             }
 
             nav ul.active {
