@@ -1706,16 +1706,7 @@ Our commitment is to deliver exceptional service and quality products combined w
         function toggleIndustry(header) {
             const content = header.nextElementSibling;
             const isActive = header.classList.contains('active');
-            
-            // Close all other accordions
-            document.querySelectorAll('.industry-header').forEach(otherHeader => {
-                if (otherHeader !== header) {
-                    otherHeader.classList.remove('active');
-                    const otherContent = otherHeader.nextElementSibling;
-                    otherContent.classList.remove('active');
-                    otherContent.style.maxHeight = '0px';
-                }
-            });
+        
             
             // Toggle current accordion
             if (isActive) {
