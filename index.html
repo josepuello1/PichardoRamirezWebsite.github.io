@@ -1201,6 +1201,24 @@
                 padding: 1.5rem;
             }
         }
+
+        .contact-detail-item.address{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;            /* Centers both image and text */
+        padding: 10px;                 /* Adds some spacing inside the box */
+        }
+
+        .contact-detail-item .contact-image {
+        width: 100px;                  /* Adjust to your preferred size */
+        height: auto;
+        margin-bottom: 10px;           /* Space between image and address text */
+        display: block;                /* Ensures it's treated as a block element */
+        margin-left: auto;             /* Centers image horizontally */
+        margin-right: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -1463,15 +1481,15 @@ Our commitment is to deliver exceptional service and quality products combined w
                         <h3 data-eng="Get in Touch" data-es="Póngase en Contacto">Get in Touch</h3>
                         <p data-eng="Let us help you solve your industrial materials needs with the right approach." data-es="Déjenos ayudarle a solucionar sus necesiades de materiales industriales.">Let us help you solve your industrial materials needs with the right approach.</p>
                         <div class="contact-details">
-                            <div class="contact-detail-item">
+                            <div class="contact-detail-item address">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span data-eng="Santo Domingo, Dominican Republic" data-es="Santo Domingo, República Dominicana">
-                                    <br> Calle Roberto Pastoriza #457<br> 
-                                    <br> Villa Palmera Business Center <br> 
-                                    <br> Suite 10-02A<br> 
-                                    <br> Distrito Nacional, Santo Domingo, Dominican<br>
-                                </span>
-                                
+                                <img src="vpbs.jpg" alt="Office Location" style="width: 200px; height: auto; margin-bottom: 10px;">
+                                <span>
+                                    <br>Calle Roberto Pastoriza #457</br>
+                                    <br>Villa Palmera Business Center</br>
+                                    <br>Suite 10-02A</br>
+                                    <br>Distrito Nacional, Santo Domingo, Dominican Republic</br>
+                                </span> 
                             </div>
                             <div class="contact-detail-item">
                                 <i class="fas fa-envelope"></i>
