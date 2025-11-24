@@ -3,41 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pichardo, Ramirez & Co., SRL has been connecting global manufacturers with local industries in the Dominican Republic since 1973. Explore our expertise in plastic resins, glass solutions, Agrochemicals, crop protection, food packaging, pharmaceutical glass, lumber, steel, construction glass, and more.">
-    <title>Pichardo, Ramirez & Co., SRL - Leading Industrial Trade Representatives in the Dominican Republic</title>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Pichardo, Ramirez & Co., SRL",
-        "url": "https://www.pichardoramirez.com",
-        "logo": "https://www.pichardoramirez.com/logo-no-background.png",
-        "description": "Leading industrial trade representatives in the Dominican Republic since 1973, connecting global manufacturers with local industry."
-    }
-    </script>
+    <meta name="description" content="Pichardo, Ramirez & Co., SRL - 50+ years connecting global manufacturers with Dominican industries. Premium industrial materials, expert trade representation.">
+    <title>Pichardo, Ramirez & Co., SRL - Industrial Trade Excellence Since 1973</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-color: #1e293b;        /* Deep slate - sophisticated, trustworthy */
-            --secondary-color: #0f172a;      /* Darker slate - premium, authoritative */
-            --accent-color: #dc2626;         /* Strategic red - international business, action */
-            --accent-secondary: #059669;     /* Forest green - growth, stability */
+            --primary-color: #1e293b;
+            --secondary-color: #0f172a;
+            --accent-color: #dc2626;
+            --accent-secondary: #059669;
             --text-dark: #0f172a;
             --text-light: #64748b;
             --text-muted: #94a3b8;
             --surface: #ffffff;
             --surface-secondary: #f8fafc;
             --surface-accent: #f1f5f9;
-            --surface-dark: #334155;
             --border: #e2e8f0;
-            --border-light: #f1f5f9;
-            --shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px 0 rgba(15, 23, 42, 0.04);
-            --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
-            --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+            --shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+            --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
         }
 
         * {
@@ -58,61 +45,33 @@
             overflow-x: hidden;
         }
 
-        /* Header Styles */
         header {
             background: url(port.jpg);
             background-size: cover;
             background-position: center;
             padding: 2rem 1rem;
             color: white;
-            text-align: center;
             position: relative;
-            overflow: hidden;
-            display: flex; /* use flex to align items */
-            justify-content: space-between; /* logo left, language toggle right */
-            align-items: flex-start; /* align items to top */
-            min-height: 120px; /* optional, adjust header height */
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>'); */
-            pointer-events: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            min-height: 120px;
         }
 
         .logo-container {
             position: relative;
             z-index: 2;
-            animation: fadeInUp 0.5s ease-out;
         }
 
         .logo-container img {
-            /* max-width: min(500px, 90vw); */
             max-width: 300px;
-            display: block;
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-            transition: transform 0.3s ease;
-        }
-
-        .logo-container img:hover {
-            transform: scale(1.02);
         }
 
         @media (max-width: 768px) {
-            header {
-                min-height: 120px; /* adjust if needed */
-                padding: 1.5rem 1rem;
-            }
-
             .logo-container img {
-                max-height: 30%; /* logo will not exceed 30% of header height */
-                max-width: 30%;
+                max-width: 200px;
             }
         }
 
@@ -138,10 +97,8 @@
             background: var(--accent-color);
             color: white;
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
         }
 
-        /* Navigation Styles */
         nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
@@ -149,11 +106,6 @@
             position: sticky;
             top: 0;
             z-index: 9999;
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            box-shadow: var(--shadow-lg);
         }
 
         nav ul {
@@ -166,10 +118,6 @@
             margin: 0 auto;
         }
 
-        nav ul li {
-            position: relative;
-        }
-
         nav ul li a {
             color: var(--text-dark);
             text-decoration: none;
@@ -177,23 +125,6 @@
             display: block;
             font-weight: 500;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        nav ul li a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        nav ul li a:hover::before {
-            left: 100%;
         }
 
         nav ul li a:hover {
@@ -201,229 +132,26 @@
             background-color: var(--surface-accent);
         }
 
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: var(--accent-color);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        nav ul li a:hover::after {
-            width: 80%;
-        }
-
-        /* Navigation Container */
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1rem;
-        }
-
-        /* Hamburger Menu Button */
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .nav-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--text-dark);
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
-
-        /* Hamburger Animation */
-        .nav-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .nav-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .nav-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-
-        /* Mobile Navigation Styles */
         @media (max-width: 768px) {
-        
-
-
             nav ul {
-                display: flex;
-                flex-wrap: nowrap;
-                margin: 0;
-                position: static;
-                justify-content: center;
-                transition: right 0.3s ease;
-                z-index: 9999;
-                overflow: hidden;
+                gap: 0.3rem;
                 padding: 0 0.5rem;
-                width: 100%;
-                flex-direction: row; /* horizontal */
-                align-items: center;
-                height: auto;
-                background: rgba(255,255,255,0.95);
-                backdrop-filter: blur(20px);
-                gap: 0.5rem;
-                box-sizing: border-box;
-                background: transparent;
-            }
-
-            nav ul.active {
-                right: 0;
-            }
-
-            nav ul li {
-                width: auto;
-                flex: 1 1 auto;
-                text-align: center;
-                margin: 0;
-                min-width: 0;
-            }
-
-            nav ul li a {
-                white-space: nowrap;
-                padding: 0.5rem 1rem;
-                font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-                border-bottom: none;
-                display: inline-block;
-                border-radius: 8px;
-            }
-
-            nav ul li a:hover {
-                background-color: var(--surface-accent);
-            }
-
-            .hero-section {
-                padding: 4rem 1rem;
-            }
-
-            .section {
-                padding: 3rem 0;
-            }
-            nav ul li {
-                margin: 0 0.5rem;
-                width: auto;
             }
 
             nav ul li a {
                 padding: 0.5rem 0.8rem;
-                font-size: clamp(0.7rem, 2.5vw, 0.9rem); /* shrink text on small screens */
-                border-bottom: none;
-
-            }
-
-            .nav-toggle {
-                display: none; /* hide hamburger entirely */
-            }
-
-            /* Accordion mobile optimizations */
-            .industry-accordion {
-                margin-top: 2rem;
-            }
-
-            .industry-header {
-                padding: 1rem 1.5rem;
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-            }
-
-            .industry-title {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-
-            .industry-toggle {
-                position: absolute;
-                top: 1rem;
-                right: 1.5rem;
-                margin-left: 0;
-            }
-
-            .industry-content.active {
-                padding: 1rem 1.5rem;
-            }
-
-            .materials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::before {
-                left: 2rem;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 4rem;
-                padding-right: 0;
-                justify-content: flex-start;
-            }
-
-            .timeline-item:nth-child(even) {
-                margin-left: 0;
-                padding-left: 4rem;
-                padding-right: 0;
-            }
-
-            .timeline-item::before,
-            .timeline-item:nth-child(even)::before {
-                left: 1.5rem;
-                right: auto;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .value-props ul {
-                grid-template-columns: 1fr;
-            }
-
-            .language-toggle {
-                top: 1rem;
-                right: 1rem;
-                z-index: 1001;
-            }
-
-            /* Mobile optimizations - remove animations on mobile for better performance */
-            .animate-on-scroll {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
+                font-size: clamp(0.7rem, 2.5vw, 0.9rem);
             }
         }
 
-
-        /* Hero Section */
-.hero-section {
+        .hero-section {
             background: url(TransportImage.png);
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
             color: white;
             padding: 8rem 2rem;
             text-align: center;
             position: relative;
-            overflow: hidden;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -437,12 +165,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                linear-gradient(135deg, rgba(15, 66, 154, 0.9) 0%, rgba(29, 78, 216, 0.8) 50%, rgba(55, 96, 196, 0.9) 100%),
-                radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 40%),
-                radial-gradient(circle at 70% 80%, rgba(147, 197, 253, 0.2) 0%, transparent 40%),
-                radial-gradient(circle at 20% 60%, rgba(219, 234, 254, 0.1) 0%, transparent 30%);
-            pointer-events: none;
+            background: linear-gradient(135deg, rgba(15, 66, 154, 0.9) 0%, rgba(29, 78, 216, 0.8) 50%, rgba(55, 96, 196, 0.9) 100%);
         }
 
         .hero-content {
@@ -450,7 +173,6 @@
             margin: 0 auto;
             position: relative;
             z-index: 2;
-            animation: fadeInUp 0.6s ease-out 0.1s both;
         }
 
         .hero-title {
@@ -459,11 +181,6 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
             line-height: 1.2;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .hero-subtitle {
@@ -471,12 +188,9 @@
             margin-bottom: 2.5rem;
             opacity: 0.95;
             line-height: 1.7;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-.hero-cta {
+        .hero-cta {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -489,35 +203,50 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-xl);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .hero-cta:hover::before {
-            left: 100%;
         }
 
         .hero-cta:hover {
-            background: linear-gradient(135deg, #334155 0%, #475569 100%);
             transform: translateY(-3px);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* Container */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .stats-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -526,6 +255,12 @@
 
         .section {
             padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 3rem 0;
+            }
         }
 
         .section-title {
@@ -550,40 +285,72 @@
             border-radius: 2px;
         }
 
-        /* About Section */
         #about {
             background: var(--surface-secondary);
         }
 
-        .about-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .about-description {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-light);
-            margin-bottom: 3rem;
             line-height: 1.8;
-        }
-
-        .value-props {
-            text-align: left;
-        }
-
-        .value-props h3 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
+            margin-bottom: 3rem;
             text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .key-differentiators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .differentiator-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .differentiator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .differentiator-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-color), #ef4444);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .differentiator-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .differentiator-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
         }
 
         .value-props ul {
             list-style: none;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
         }
 
         .value-props li {
@@ -612,13 +379,44 @@
         }
 
         .value-props li:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
 
-        /* Industries Section - Accordion Layout */
+        .product-search-container {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1.5rem;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
         .industry-accordion {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 3rem auto 0;
         }
 
@@ -647,52 +445,36 @@
             position: relative;
         }
 
-        .industry-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .industry-header:hover::before {
-            transform: scaleX(1);
-        }
-
         .industry-header:hover {
             background: var(--surface-accent);
         }
 
-        .industry-header.active {
-            background: var(--surface-accent);
-        }
-
-        .industry-header.active::before {
-            transform: scaleX(1);
-        }
-
-        .industry-title {
+        .industry-title-row {
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .industry-title h3 {
+        .industry-title-row h3 {
             color: var(--primary-color);
             font-size: 1.3rem;
             font-weight: 600;
-            margin: 0;
         }
 
-        .industry-title p {
+        .product-count {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .industry-desc {
             color: var(--text-light);
-            margin: 0;
             font-size: 0.95rem;
-            line-height: 1.5;
+            margin-top: 0.5rem;
         }
 
         .industry-toggle {
@@ -710,19 +492,19 @@
         .industry-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out; /* padding 0.3s ease-out; */
+            transition: max-height 0.3s ease-out;
             background: var(--surface-secondary);
             padding: 0 2rem;
         }
 
         .industry-content.active {
-            max-height: 9999px; /* Increased from 500px to accommodate more items */
+            max-height: 9999px;
             padding: 1.5rem 2rem 2.5rem;
         }
 
         .materials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 1rem;
         }
 
@@ -740,28 +522,24 @@
             box-shadow: var(--shadow);
         }
 
-        .material-item h4 {
+        .material-item h5 {
             color: var(--primary-color);
             font-size: 1rem;
             font-weight: 600;
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.25rem 0;
         }
 
-        .material-item p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin: 0;
-            line-height: 1.4;
+        .material-specs {
+            color: var(--text-muted);
+            font-size: 0.85rem;
         }
 
-        .placeholder-text {
-            text-align: center;
-            color: var(--text-light);
-            font-style: italic;
-            padding: 2rem;
+        @media (max-width: 768px) {
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* Legacy Section */
         .legacy-section {
             background: linear-gradient(135deg, var(--surface-accent) 0%, var(--surface-secondary) 100%);
         }
@@ -782,7 +560,6 @@
             width: 4px;
             background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
             transform: translateX(-50%);
-            border-radius: 2px;
         }
 
         .timeline-item {
@@ -841,55 +618,77 @@
 
         .timeline-content p {
             color: var(--text-light);
-            line-height: 1.6;
         }
 
- /* Mobile-first contact grid */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                padding-left: 4rem;
+                padding-right: 0;
+                margin-left: 0;
+            }
+
+            .timeline-item::before,
+            .timeline-item:nth-child(even)::before {
+                left: 1.5rem;
+                right: auto;
+            }
+        }
+
         .contact-grid {
-            display: block;
-            max-width: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Contact info section - compact mobile design */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
         .contact-info {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
             background: white;
+            padding: 2rem;
             border-radius: 16px;
             box-shadow: var(--shadow);
         }
 
         .contact-info h3 {
             color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .contact-info p {
             color: var(--text-light);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            margin-bottom: 2rem;
         }
 
-        /* Compact contact details for mobile */
         .contact-details {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
+            gap: 1rem;
         }
 
         .contact-detail-item {
             display: flex;
             align-items: center;
-            gap: 0.8rem;
-            padding: 0.8rem 1rem;
+            gap: 1rem;
+            padding: 1rem;
             background: var(--surface-secondary);
             border-radius: 10px;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
+            text-decoration: none;
+            color: var(--text-dark);
         }
 
         .contact-detail-item:hover {
@@ -899,65 +698,99 @@
 
         .contact-detail-item i {
             color: var(--accent-color);
-            font-size: 1rem;
-            width: 1.2rem;
-            flex-shrink: 0;
+            font-size: 1.2rem;
+            width: 1.5rem;
         }
 
-        /* Mobile-optimized form */
+        .contact-detail-item.address {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .contact-image {
+            width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
         .contact-form {
             background: white;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 16px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            width: 100%;
-            max-width: 100%;
         }
 
         .form-group {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-row {
             display: flex;
-            gap: 0.8rem;
+            gap: 1rem;
         }
 
         .form-row .form-group {
             flex: 1;
-            margin-bottom: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
         }
 
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 0.9rem;
+            padding: 1rem;
             border: 2px solid var(--border);
             border-radius: 8px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-family: inherit;
             transition: all 0.3s ease;
-            background: var(--surface);
-            box-sizing: border-box;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(30, 41, 59, 0.1);
-            background: white;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
         }
 
         .contact-form textarea {
             resize: vertical;
-            min-height: 100px;
-            max-height: 200px;
+            min-height: 120px;
+        }
+
+        .form-error {
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-error.visible {
+            display: block;
+        }
+
+        .form-success {
+            background: var(--accent-secondary);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+            text-align: center;
+        }
+
+        .form-success.visible {
+            display: block;
         }
 
         .btn {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--accent-color), #ef4444);
             color: white;
             padding: 1rem 2rem;
             border: none;
@@ -972,126 +805,18 @@
             justify-content: center;
             gap: 0.5rem;
             width: 100%;
-            max-width: 200px;
-            margin: 0 auto;
         }
 
-        .btn:hover {
+        .btn:hover:not(:disabled) {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
 
-        .btn:active {
-            transform: translateY(0);
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
         }
 
-        /* Desktop styles */
-        @media (min-width: 769px) {
-            .contact-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 3rem;
-                max-width: 1200px;
-                align-items: start;
-            }
-
-            .contact-info {
-                text-align: left;
-                margin-bottom: 0;
-                padding: 2rem;
-            }
-
-            .contact-info h3 {
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .contact-info p {
-                font-size: 1.1rem;
-                margin-bottom: 2rem;
-            }
-
-            .contact-details {
-                gap: 1rem;
-            }
-
-            .contact-detail-item {
-                padding: 1rem;
-                font-size: 1rem;
-            }
-
-            .contact-detail-item i {
-                font-size: 1.2rem;
-                width: 1.5rem;
-            }
-
-            .contact-form {
-                padding: 2rem;
-            }
-
-            .form-group {
-                margin-bottom: 1.5rem;
-            }
-
-            .form-row .form-group {
-                margin-bottom: 1.5rem;
-            }
-
-            .contact-form input,
-            .contact-form textarea {
-                padding: 1rem;
-                font-size: 1rem;
-            }
-
-            .contact-form textarea {
-                min-height: 120px;
-            }
-
-            .btn {
-                font-size: 1.1rem;
-                width: auto;
-                max-width: none;
-            }
-        }
-
-        /* Extra small screens */
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 0.8rem;
-            }
-
-            .contact-info,
-            .contact-form {
-                padding: 1.2rem;
-            }
-
-            .contact-info h3 {
-                font-size: 1.2rem;
-            }
-
-            .contact-info p {
-                font-size: 0.9rem;
-            }
-
-            .contact-detail-item {
-                padding: 0.7rem 0.8rem;
-                font-size: 0.85rem;
-            }
-
-            .contact-form input,
-            .contact-form textarea {
-                padding: 0.8rem;
-                font-size: 0.9rem;
-            }
-
-            /* Stack form row on very small screens */
-            .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-        }
-
-        /* Footer */
         footer {
             background: var(--primary-color);
             color: white;
@@ -1103,7 +828,6 @@
             opacity: 0.8;
         }
 
-        /* Scroll to top button */
         .scroll-top {
             position: fixed;
             bottom: 2rem;
@@ -1120,6 +844,7 @@
             opacity: 0;
             visibility: hidden;
             z-index: 1000;
+            box-shadow: var(--shadow-lg);
         }
 
         .scroll-top.visible {
@@ -1128,103 +853,26 @@
         }
 
         .scroll-top:hover {
-            background: #d97706;
+            background: #ef4444;
             transform: translateY(-3px);
         }
 
-        /* Optimized Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-light);
+            display: none;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .no-results.visible {
+            display: block;
         }
-
-        /* Fast-loading animation class - much more aggressive settings */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(15px);
-            transition: all 0.2s ease-out;
-        }
-
-        .animate-on-scroll.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Critical content - always visible for above-the-fold content */
-        .critical-content {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-
-        /* Reduced motion for users who prefer it */
-        @media (prefers-reduced-motion: reduce) {
-            .animate-on-scroll {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
-            
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        /* Mobile Responsive */
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
-            }
-
-            .hero-section,
-            .section {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            .industry-card,
-            .timeline-content,
-            .contact-form {
-                padding: 1.5rem;
-            }
-        }
-
-        .contact-detail-item.address{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;            /* Centers both image and text */
-        padding: 10px;                 /* Adds some spacing inside the box */
-        }
-
-        .contact-detail-item .contact-image {
-        width: 100px;                  /* Adjust to your preferred size */
-        height: auto;
-        margin-bottom: 10px;           /* Space between image and address text */
-        display: block;                /* Ensures it's treated as a block element */
-        margin-left: auto;             /* Centers image horizontally */
-        margin-right: auto;
-        }
-
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="logo-no-background3.png" class="logo" alt="Pichardo, Ramirez & Co., SRL - Industrial Trade Representatives">
+            <img src="logo-no-background3.png" alt="Pichardo, Ramirez & Co., SRL">
         </div>
         <button class="language-toggle" id="language-toggle">
             <i class="fas fa-globe"></i> ES | EN
@@ -1232,241 +880,121 @@
     </header>
 
     <nav id="navbar">
-        <div class="nav-container">
-            <button class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul>
-                <li><a href="#home" data-eng="Home" data-es="Inicio">Home</a></li>
-                <li><a href="#about" data-eng="About Us" data-es="Sobre Nosotros">About Us</a></li>
-                <li><a href="#industries" data-eng="Industries" data-es="Industrias">Industries</a></li>
-                <li><a href="#legacy" data-eng="Our Legacy" data-es="Nuestro Legado">Our Legacy</a></li>
-                <li><a href="#contact" data-eng="Contact" data-es="Contacto">Contact</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="#home" data-eng="Home" data-es="Inicio">Home</a></li>
+            <li><a href="#about" data-eng="About" data-es="Nosotros">About</a></li>
+            <li><a href="#industries" data-eng="Products" data-es="Productos">Products</a></li>
+            <li><a href="#legacy" data-eng="Legacy" data-es="Legado">Legacy</a></li>
+            <li><a href="#contact" data-eng="Contact" data-es="Contacto">Contact</a></li>
+        </ul>
     </nav>
 
-    <section class="hero-section critical-content" id="home">
+    <section class="hero-section" id="home">
         <div class="hero-content">
-            <h1 class="hero-title" data-eng="Your Trusted Partner in Trade in the Dominican Republic Since 1973" data-es="Su Socio Confiable en el Comercio en Republica Dominicana Desde 1973">Your Trusted Partner in Trade in the Dominican Republic Since 1973</h1>
-            <p class="hero-subtitle" data-eng="Connecting international manufacturers with Dominican industry through decades of expertise and trusted relationships" data-es="Conectando fabricantes internacionales con la industria dominicana a través de décadas de experiencia y relaciones de confianza">Connecting international manufacturers with Dominican industry through decades of expertise and trusted relationships</p>
-            <a href="#contact" class="hero-cta" data-eng="Get in Touch" data-es="Contáctanos">
-                <span>Get in Touch</span>
+            <h1 class="hero-title" data-eng="Your Trusted Partner in Dominican Republic Trade Since 1973" data-es="Su Socio Confiable en República Dominicana Desde 1973">Your Trusted Partner in Dominican Republic Trade Since 1973</h1>
+            <p class="hero-subtitle" data-eng="Connecting international manufacturers with Dominican industry through decades of expertise" data-es="Conectando fabricantes internacionales con la industria dominicana con décadas de experiencia">Connecting international manufacturers with Dominican industry through decades of expertise</p>
+            <a href="#contact" class="hero-cta">
+                <span data-eng="Get in Touch" data-es="Contactenos">Get in Touch</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </section>
 
+    <div class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label" data-eng="Years of Excellence" data-es="Años de Excelencia">Years of Excellence</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label" data-eng="Products Available" data-es="Productos Disponibles">Products Available</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label" data-eng="Industry Sectors" data-es="Sectores Industriales">Industry Sectors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label" data-eng="Generations of Trust" data-es="Generaciones de Confianza">Generations of Trust</div>
+            </div>
+        </div>
+    </div>
+
     <main>
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll" data-eng="About Us" data-es="Sobre Nosotros">About Us</h2>
-                <div class="about-content">
-                    <p class="about-description animate-on-scroll" data-eng="Since 1973, Pichardo, Ramirez & Co., SRL has been a trusted leader in industrial trade within the Dominican Republic. We specialize in bridging the gap between world-class manufacturers and local industries, acting as the reliable representative and strategic partner for global suppliers.<br><br>
-Our commitment is to deliver exceptional service and quality products combined with competitive pricing, ensuring our clients consistently choose us as their preferred partner for sourcing industrial materials. With decades of experience and deep market insight, we drive value and growth for both manufacturers and businesses across the region." data-es="Desde 1973, Pichardo, Ramirez & Co., SRL se ha consolidado como un referente confiable en el comercio industrial en la República Dominicana. Nos especializamos en conectar a fabricantes de clase mundial con las industrias locales, actuando como representantes estratégicos y aliados confiables para proveedores globales.<br><br>Nuestro compromiso es ofrecer productos de calidad excepcional, combinados con precios competitivos, asegurando que nuestros clientes nos elijan siempre como su socio preferido para el abastecimiento de materiales industriales. Con décadas de experiencia y un profundo conocimiento del mercado, impulsamos el valor y crecimiento tanto para fabricantes como para negocios en la región.">
-                        Since 1973, Pichardo, Ramirez & Co., SRL has been a trusted leader in industrial trade within the Dominican Republic. We specialize in bridging the gap between world-class manufacturers and local industries, acting as the reliable representative and strategic partner for global suppliers.<br><br>Our commitment is to deliver exceptional service and quality products combined with competitive pricing, ensuring our clients consistently choose us as their preferred partner for sourcing industrial materials. With decades of experience and deep market insight, we drive value and growth for both manufacturers and businesses across the region.
-                    </p>
-                    
-                    <div class="value-props animate-on-scroll">
-                        <h3 data-eng="Why work with Us" data-es="Por Qué Elegirnos">Why Work With Us</h3>
-                        <ul>
-                            <li data-eng="50+ years of global and local market expertise" data-es="Más de 50 años de experiencia en el mercado global y local">50+ years of market expertise</li>
-                            <li data-eng="Deep understanding of international and local business culture" data-es="Profundo conocimiento de la cultura empresarial global y local">Deep understanding of global and local business culture</li>
-                            <li data-eng="Aligned with securing mutually profitable outcomes for all parties involved" data-es="Comprometidos a lograr resultados mutuamente rentables para todas las partes involucradas.">Committed to securing mutually profitable outcomes for all parties involved</li>
-                            <li data-eng="Extensive network of global suppliers and local customers" data-es="Amplia red de proveedores globales y clientes locales">Extensive network of global suppliers and local customers</li>
-                            <li data-eng="Comprehensive support including industry knowledge, leads, sales, sourcing, logistics and payment processing" data-es="Soporte integral que incluye conocimiento del sector, generación de contactos, ventas, abastecimiento, logística y procesamiento de pagos.">Comprehensive support including industry knowledge, leads, sales, sourcing, logistics and payment processing</li>
-                            <li data-eng="Multi-generational commitment to excellence" data-es="Compromiso multigeneracional con la excelencia">Multi-generational commitment to excellence</li>
-                        </ul>
+                <h2 class="section-title" data-eng="Why Choose Pichardo Ramirez" data-es="Por Qué Elegir Pichardo Ramirez">Why Choose Pichardo Ramirez</h2>
+                
+                <p class="about-description" data-eng="Since 1973, we've been the bridge between world-class manufacturers and Dominican industries. Our multi-generational commitment ensures unparalleled expertise, trusted relationships, and comprehensive support." data-es="Desde 1973, hemos sido el puente entre fabricantes de clase mundial e industrias dominicanas. Nuestro compromiso multigeneracional asegura experiencia incomparable y soporte integral.">Since 1973, we've been the bridge between world-class manufacturers and Dominican industries. Our multi-generational commitment ensures unparalleled expertise, trusted relationships, and comprehensive support.</p>
+
+                <div class="key-differentiators">
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon"><i class="fas fa-globe-americas"></i></div>
+                        <h3 class="differentiator-title" data-eng="End-to-End Support" data-es="Soporte Integral">End-to-End Support</h3>
+                        <p class="differentiator-desc" data-eng="From sourcing to delivery, we handle everything" data-es="Desde abastecimiento hasta entrega, manejamos todo">From sourcing to delivery, we handle everything</p>
                     </div>
+                </div>
+                
+                <div class="value-props">
+                    <ul>
+                        <li data-eng="Competitive pricing through established relationships" data-es="Precios competitivos a través de relaciones establecidas">Competitive pricing through established relationships</li>
+                        <li data-eng="Quality assurance and certification support" data-es="Garantía de calidad y soporte de certificación">Quality assurance and certification support</li>
+                        <li data-eng="Fast response times and personalized service" data-es="Tiempos de respuesta rápidos y servicio personalizado">Fast response times and personalized service</li>
+                        <li data-eng="Technical expertise across all product lines" data-es="Experiencia técnica en todas las líneas">Technical expertise across all product lines</li>
+                        <li data-eng="Flexible payment terms and financing options" data-es="Términos de pago flexibles">Flexible payment terms and financing options</li>
+                        <li data-eng="Multi-generational family business built on trust" data-es="Negocio familiar construido sobre confianza">Multi-generational family business built on trust</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section id="industries" class="section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll" data-eng="Products and Industries We Serve" data-es="Materiales e Industrias Que Servimos">Products and Industries We Serve</h2>
-                <div class="industry-accordion">
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Industrial Resins" data-es="Resinas Industriales">Industrial Resins</h3>
-                                <p data-eng="Comprehensive range of plastic resins including PE, PP, PS, PVC, PET and others from trusted global suppliers." data-es="Amplia gama de resinas plásticas, incluyendo PE, PP, PS, PVC, PET y otros de proveedores globales de confianza.">Comprehensive range of plastic resins including PE, PP, PS, PVC, PET and others from trusted global suppliers.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Material specifications and suppliers will be added here." data-es="Las especificaciones de materiales y proveedores se agregarán aquí.">Material specifications and suppliers will be added here.</p>
-                            </div>
-                        </div>
+                <h2 class="section-title" data-eng="Products & Solutions" data-es="Productos y Soluciones">Products & Solutions</h2>
+                
+                <div class="product-search-container">
+                    <div class="search-box">
+                        <input type="text" id="product-search" placeholder="Search products or industries..." data-eng-placeholder="Search products or industries..." data-es-placeholder="Buscar productos o industrias...">
+                        <i class="fas fa-search"></i>
                     </div>
+                </div>
 
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Printing and Packaging Paper and Boards" data-es="Papales y Cartones">Printing and Packaging Paper and Boards</h3>
-                                <p data-eng="High-quality paper and pulp products, including Printing and Publishing, Paperboard and Packaging papers, Tissue & Hygiene." data-es="Productos de papel y pulpa de alta calidad, incluyendo impresión y publicaciones, cartón y papeles para empaques, así como tissue y papeles de higiene.">High-quality paper and pulp products, including Printing and Publishing, Paperboard and Packaging papers, Tissue & Hygiene.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Paper and pulp product specifications will be added here." data-es="Las especificaciones de productos de papel y pulpa se agregarán aquí.">Paper and pulp product specifications will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="industry-accordion" id="industry-accordion"></div>
 
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Chemicals and Specialties" data-es="Químicos y Especialidades">Chemicals and Specialties</h3>
-                                <p data-eng="We supply a comprehensive range of industrial chemicals and specialties—solvents, silicas, acids, alkalis, , plasticizer, alcohols, glycols, acrylates, monomers, and intermediates" data-es="Suministramos una amplia gama de productos químicos y especialidades industriales: disolventes, silicas, ácidos, álcalis, plastificantes, alcoholes, glicoles, acrilatos, monómeros e intermedios.">We supply a comprehensive range of industrial chemicals and specialties—solvents, silicas, acids, alkalis, plasticizer, alcohols, glycols, acrylates, monomers, and intermediates.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Chemical product details and specifications will be added here." data-es="Los detalles y especificaciones de productos químicos se agregarán aquí.">Chemical product details and specifications will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Dairy Products" data-es="Productos Lácteos">Dairy Products</h3>
-                                <p data-eng="Premium dairy ingredients including whey powder, lactose, milk powders, and protein concentrates." data-es="Ingredientes y derivadeos lácteos premium que incluyen suero de leche en polvo, lactosa, leche descremada y entera en polvo, concentrados y asilados de proteína.">Premium dairy ingredients including whey powder, lactose, milk powders, and protein concentrates.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Dairy product specifications and sourcing information will be added here." data-es="Las especificaciones de productos lácteos e información de abastecimiento se agregarán aquí.">Dairy product specifications and sourcing information will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Food & Pharmaceutical Packaging" data-es="Embalaje de Alimentos y Productos Farmacéuticos">Food & Pharmaceutical Packaging</h3>
-                                <p data-eng="Comprehensive packaging solutions including glass, rigid and flexible options for food and pharma solids, liquids and powders." data-es="Soluciones de empaque integrales, incluyendo opciones de vidrio, rígidas y flexibles para alimentos y productos farmacéuticos en sólidos, líquidos y polvos.">Comprehensive packaging solutions including glass, rigid and flexible options for food and pharma solids, liquids and powders.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Packaging solution details and specifications will be added here." data-es="Los detalles y especificaciones de soluciones de empaque se agregarán aquí.">Packaging solution details and specifications will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Crop Protection & Plant Nutrition" data-es="Protección de Cultivos y Nutrición de Plantas">Crop Protection & Plant Nutrition</h3>
-                                <p data-eng="Agricultural solutions for enhanced crop yields and plant health." data-es="Soluciones agrícolas para mejorar los rendimientos de los cultivos y la salud de las plantas.">Agricultural solutions for enhanced crop yields and plant health.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Agricultural product information and specifications will be added here." data-es="La información y especificaciones de productos agrícolas se agregarán aquí.">Agricultural product information and specifications will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Lumber" data-es="Maderas">Lumber</h3>
-                                <p data-eng="Extensive range of lumber products sourced from leading Brazilian and global mills." data-es="Amplia gama de productos de madera provenientes de las principales fábricas Brasileñas y globales.">Extensive range of lumber products sourced from leading Brazilian and global mills.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Lumber product specifications and sourcing information will be added here." data-es="Las especificaciones de productos de madera e información de abastecimiento se agregarán aquí.">Lumber product specifications and sourcing information will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Glass Solutions" data-es="Soluciones de Vidrio">Glass Solutions</h3>
-                                <p data-eng="Exclusive representatives of Saint-Gobain France, providing premium glass solutions." data-es="Representantes exclusivos de Saint-Gobain Francia, proporcionando soluciones de vidrio premium.">Exclusive representatives of Saint-Gobain France, providing premium glass solutions.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Glass product specifications and applications will be added here." data-es="Las especificaciones y aplicaciones de productos de vidrio se agregarán aquí.">Glass product specifications and applications will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Industrial Machinery" data-es="Maquinaria Industrial">Industrial Machinery</h3>
-                                <p data-eng="Specialized packaging and processing equipment for various industries." data-es="Maquinas automatizadoras de lineas de produccion">Specialized packaging and processing equipment for various industries.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Machinery specifications and equipment details will be added here." data-es="Las especificaciones de maquinaria y detalles de equipos se agregarán aquí.">Machinery specifications and equipment details will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="industry-item animate-on-scroll">
-                        <div class="industry-header" onclick="toggleIndustry(this)">
-                            <div class="industry-title">
-                                <h3 data-eng="Steel & Metals" data-es="Acero y Metales">Steel & Metals</h3>
-                                <p data-eng="Extensive range of steel and metal products sourced from leading global mills." data-es="Amplia gama de productos de acero y metales provenientes de las principales fábricas globales.">Extensive range of steel and metal products sourced from leading global mills.</p>
-                            </div>
-                            <i class="fas fa-chevron-down industry-toggle"></i>
-                        </div>
-                        <div class="industry-content">
-                            <div class="placeholder-text">
-                                <p data-eng="Steel and metal product specifications will be added here." data-es="Las especificaciones de productos de acero y metales se agregarán aquí.">Steel and metal product specifications will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="no-results" id="no-results">
+                    <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+                    <p data-eng="No products found. Try different keywords." data-es="No se encontraron productos. Intente otras palabras.">No products found. Try different keywords.</p>
                 </div>
             </div>
         </section>
         
         <section id="legacy" class="legacy-section section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll" data-eng="Our Legacy" data-es="Nuestro Legado">Our Legacy</h2>
+                <h2 class="section-title" data-eng="Our Legacy" data-es="Nuestro Legado">Our Legacy</h2>
                 <div class="timeline">
-                    <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 data-eng="1973" data-es="1973">1973</h3>
-                            <p data-eng="Founded by Mr. Juan Fernando Pichardo Lopez, initially focusing on pharmaceutical products." data-es="Fundada por el Sr. Juan Fernando Pichardo Lopez, inicialmente enfocada en productos farmacéuticos.">Founded by Mr. Juan Fernando Pichardo Lopez, initially focusing on pharmaceutical products.</p>
+                            <h3>1973</h3>
+                            <p data-eng="Founded by Mr. Juan Fernando Pichardo Lopez, establishing our reputation in pharmaceutical and industrial products." data-es="Fundada por el Sr. Juan Fernando Pichardo Lopez, estableciendo nuestra reputación en productos farmacéuticos e industriales.">Founded by Mr. Juan Fernando Pichardo Lopez, establishing our reputation in pharmaceutical and industrial products.</p>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 data-eng="1970s-1980s" data-es="1970s-1980s">1970s-1980s</h3>
-                            <p data-eng="Second generation joined. Expanded into industrial materials, partnering with major U.S. and European manufacturers." data-es="Se expandió con la segunda generación hacia materiales industriales, asociándose con importantes fabricantes de EE.UU. y Europa.">Second generation joined. Expanded into industrial materials, partnering with major U.S. and European manufacturers.</p>
+                            <h3>1970s-1980s</h3>
+                            <p data-eng="Second generation joined, expanding into industrial materials and forging partnerships with major manufacturers." data-es="La segunda generación se unió, expandiéndose hacia materiales industriales y forjando asociaciones con importantes fabricantes.">Second generation joined, expanding into industrial materials and forging partnerships with major manufacturers.</p>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 data-eng="1990s-2000s" data-es="1990s-2000s">1990s-2000s</h3>
-                            <p data-eng="Broadening of our industry reach and strengthening international partnerships." data-es="Ampliacion de nuestro alcance industrial y fortalecimiento de nuestras asociaciones internacionales.">Broadening of our industry reach and strengthening international partnerships.</p>
+                            <h3>1990s-2000s</h3>
+                            <p data-eng="Diversification across multiple industries, strengthening our position as the leading trade representative." data-es="Diversificación en múltiples industrias, fortaleciendo nuestra posición como el representante comercial líder.">Diversification across multiple industries, strengthening our position as the leading trade representative.</p>
                         </div>
                     </div>
-                    <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 data-eng="Present Day" data-es="Día Presente">2010s-Present Day</h3>
-                            <p data-eng="Third generation continuing our legacy of trust and excellence in global trade." data-es="La tercera generación continúa nuestro legado de confianza y excelencia en el comercio global.">Third generation continuing our legacy of trust and excellence in global trade.</p>
+                            <h3 data-eng="2010s-Present" data-es="2010s-Presente">2010s-Present</h3>
+                            <p data-eng="Third generation continues our legacy of excellence, modernizing operations while maintaining trusted relationships." data-es="La tercera generación continúa nuestro legado de excelencia, modernizando operaciones mientras mantiene relaciones de confianza.">Third generation continues our legacy of excellence, modernizing operations while maintaining trusted relationships.</p>
                         </div>
                     </div>
                 </div>
@@ -1475,47 +1003,57 @@ Our commitment is to deliver exceptional service and quality products combined w
         
         <section id="contact" class="contact-section section">
             <div class="container">
-                <h2 class="section-title animate-on-scroll" data-eng="Contact Us" data-es="Contáctanos">Contact Us</h2>
+                <h2 class="section-title" data-eng="Get in Touch" data-es="Contáctanos">Get in Touch</h2>
                 <div class="contact-grid">
-                    <div class="contact-info animate-on-scroll">
-                        <h3 data-eng="Get in Touch" data-es="Póngase en Contacto">Get in Touch</h3>
-                        <p data-eng="Let us help you solve your industrial materials needs with the right approach." data-es="Déjenos ayudarle a solucionar sus necesiades de materiales industriales.">Let us help you solve your industrial materials needs with the right approach.</p>
+                    <div class="contact-info">
+                        <h3 data-eng="Let's Discuss Your Needs" data-es="Hablemos de Sus Necesidades">Let's Discuss Your Needs</h3>
+                        <p data-eng="Our team is ready to help you find the right industrial materials at competitive prices." data-es="Nuestro equipo está listo para ayudarle a encontrar los materiales industriales correctos a precios competitivos.">Our team is ready to help you find the right industrial materials at competitive prices.</p>
                         <div class="contact-details">
+                            <a href="tel:+18095426929" class="contact-detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (809) 542-6929</span>
+                            </a>
+                            <a href="mailto:recepcion@pichardoramirez.com" class="contact-detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>recepcion@pichardoramirez.com</span>
+                            </a>
                             <div class="contact-detail-item address">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <img src="vpbs.jpg" alt="Office Location" style="width: 200px; height: auto; margin-bottom: 10px;">
+                                <img src="vpbs.jpg" alt="Office Location" class="contact-image" onerror="this.style.display='none'">
                                 <span>
-                                    <br>Calle Roberto Pastoriza #457</br>
-                                    <br>Villa Palmera Business Center</br>
-                                    <br>Suite 10-02A</br>
-                                    <br>Distrito Nacional, Santo Domingo, Dominican Republic</br>
-                                </span> 
-                            </div>
-                            <div class="contact-detail-item">
-                                <i class="fas fa-envelope"></i>
-                                <span data-eng="recepcion@pichardoramirez.com" data-es="recepcion@pichardoramirez.com">recepcion@pichardoramirez.com </span>
-                            </div>
-                            <div class="contact-detail-item">
-                                <i class="fas fa-phone"></i>
-                                <span data-eng="+1 (809) 542-6929" data-es="+1 (809) 542-6929">+1 (809) 542-6929</span>
+                                    Calle Roberto Pastoriza #457<br>
+                                    Villa Palmera Business Center<br>
+                                    Suite 10-02A<br>
+                                    Santo Domingo, Dominican Republic
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form animate-on-scroll" id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-success" id="form-success">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-eng="Thank you! We'll respond within 24 hours." data-es="¡Gracias! Responderemos en 24 horas.">Thank you! We'll respond within 24 hours.</span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required data-eng-placeholder="Your Name" data-es-placeholder="Su Nombre">
+                                <div class="form-error" id="name-error" data-eng="Please enter your name" data-es="Por favor ingrese su nombre">Please enter your name</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required data-eng-placeholder="Your Email" data-es-placeholder="Su Correo">
+                                <div class="form-error" id="email-error" data-eng="Please enter a valid email" data-es="Por favor ingrese un correo válido">Please enter a valid email</div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="text" id="company" name="company" placeholder="Company Name" required data-eng-placeholder="Company Name" data-es-placeholder="Nombre de Empresa">
+                            <div class="form-error" id="company-error" data-eng="Please enter your company name" data-es="Por favor ingrese el nombre de su empresa">Please enter your company name</div>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="company" name="company" placeholder="Company Name" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="How can we help you?" rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="Tell us about your needs..." rows="5" required data-eng-placeholder="Tell us about your needs..." data-es-placeholder="Cuéntenos sobre sus necesidades..."></textarea>
+                            <div class="form-error" id="message-error" data-eng="Please enter a message" data-es="Por favor ingrese un mensaje">Please enter a message</div>
                         </div>
                         <button type="submit" class="btn">
-                            <span data-eng="Send Message" data-es="Enviar Mensaje">Send Message</span>
+                            <span data-eng="Send Inquiry" data-es="Enviar Consulta">Send Inquiry</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -1535,49 +1073,296 @@ Our commitment is to deliver exceptional service and quality products combined w
     </button>
     
     <script>
-        // Performance optimized - reduce initial DOM queries
+        const industries = [
+            {
+                title: {eng: "Industrial Resins", es: "Resinas Industriales"},
+                desc: {eng: "Comprehensive range of plastic resins from trusted global suppliers", es: "Amplia gama de resinas plásticas de proveedores globales"},
+                products: [
+                    {name: "HDPE Blow Molding", specs: "Blow molding grade"},
+                    {name: "HDPE Injection Molding", specs: "Injection grade"},
+                    {name: "HDPE Film", specs: "Film applications"},
+                    {name: "LDPE", specs: "General purpose"},
+                    {name: "LLDPE", specs: "Film & packaging"},
+                    {name: "Metallocene LLDPE", specs: "Advanced films"},
+                    {name: "PET", specs: "Bottle grade"},
+                    {name: "PVC", specs: "Rigid & flexible"},
+                    {name: "PP Homopolymer", specs: "High stiffness"},
+                    {name: "PP Copolymer", specs: "Impact resistant"},
+                    {name: "PP Block Polymer", specs: "Balanced properties"},
+                    {name: "Rotomolding Grade", specs: "Rotational molding"}
+                ]
+            },
+            {
+                title: {eng: "Paper & Packaging", es: "Papel y Embalaje"},
+                desc: {eng: "High-quality paper, paperboard, tissue products for printing and packaging directly from mills around the world", es: "Productos de papel, cartón y tissue de alta calidad para impresión y empaques, directamente desde molinos alrededor del mundo."},
+                products: [
+                    {name: "Bleached Semi-Extensible Sack Kraft", specs: "High-strength sacks and industrial bags"},
+                    {name: "Bond Paper", specs: "Office printing and writing"},
+                    {name: "Butter Wrap Paper", specs: "Food wrapping, grease-resistant"},
+                    {name: "C1S / C2S", specs: "Coated one- or two-side premium printing"},
+                    {name: "Carbonless Paper", specs: "NCR forms and multi-copy documents"},
+                    {name: "Carrier Board", specs: "Beverage and multipack carriers"},
+                    {name: "CCKB - Clay Coated Kraft", specs: "Packaging with high print quality"},
+                    {name: "Cigarette Packaging Paper", specs: "Tobacco packaging applications"},
+                    {name: "Clay Coated News Board (CCNB)", specs: "Folding cartons and packaging"},
+                    {name: "Coasterboard", specs: "Drink coasters and absorbent uses"},
+                    {name: "Coated Folding Box Board (FBB, GC1)", specs: "Premium folding cartons"},
+                    {name: "Coated Kraftback Board", specs: "Rigid packaging with coated surface"},
+                    {name: "Coated Whiteback Board", specs: "Retail packaging with white surface"},
+                    {name: "Coffee Filter Paper", specs: "Brewing filtration applications"},
+                    {name: "Core Board", specs: "Paper tube and core production"},
+                    {name: "Duplex Board", specs: "Folding cartons and packaging"},
+                    {name: "Fluting", specs: "Corrugated box middle layer"},
+                    {name: "Golden Kraft", specs: "General packaging and bags"},
+                    {name: "Greaseproof Paper & Board", specs: "Oil and grease-resistant food use"},
+                    {name: "Grey Board", specs: "Bookbinding, rigid boxes"},
+                    {name: "Kraft Liner / Kraft Paper", specs: "Corrugated packaging and bags"},
+                    {name: "Laid Paper", specs: "Premium writing and specialty prints"},
+                    {name: "Manila Folder", specs: "Stationery and document folders"},
+                    {name: "MF Unbleached Kraft Paper", specs: "General packaging and wrapping"},
+                    {name: "MG Unbleached Kraft Paper", specs: "Flexible packaging and bags"},
+                    {name: "MG Bleached Kraft Paper", specs: "Food and specialty packaging"},
+                    {name: "MG Bleached Tissue Paper", specs: "Soft tissue and hygiene uses"},
+                    {name: "Napkin Paper", specs: "Tissue napkins"},
+                    {name: "Security Paper", specs: "Documents requiring anti-fraud features"},
+                    {name: "Testliner", specs: "Corrugated packaging outer layer"},
+                    {name: "Thermal Paper", specs: "Receipt and POS printing"},
+                    {name: "Toilet Tissue Paper", specs: "Bathroom tissue"},
+                    {name: "Towel Tissue Paper", specs: "Kitchen towels and absorbent tissue"},
+                    {name: "Two Side Coated Woodfree Paper", specs: "High-quality printing jobs"},
+                    {name: "Uncoated Woodfree Paper", specs: "Writing, printing, publishing"},
+                    {name: "Unbleached Semi-Extensible Sack Kraft", specs: "Industrial sacks"},
+                    {name: "Wet Strength Carrier Board", specs: "Beverage packs resistant to humidity"},
+                    {name: "White Opaline", specs: "Premium stationery and covers"}
+                ]
+            },
+            {
+                title: {eng: "Chemicals & Specialties", es: "Químicos y Especialidades"},
+                desc: {eng: "Industrial chemicals, solvents, acids, and specialty intermediates", es: "Químicos industriales, solventes, ácidos e intermedios especializados"},
+                products: [
+                    {name: "Toluene Diisocyanate", specs: "Flexible and rigid PU foams"},
+                    {name: "Sodium Silicate", specs: "Binding, detergent & construction uses"},
+                    {name: "Sodium Metasilicate Penta", specs: "Cleaning agents and industrial detergents"},
+                    {name: "Caustic Soda Liquid", specs: "Alkali for chemical processing"},
+                    {name: "DOTP (Dioctyl Terephthalate)", specs: "Non-phthalate plasticizer for PVC"},
+                    {name: "DOP (Dioctyl Phthalate)", specs: "General-purpose PVC plasticizer"},
+                    {name: "Caustic Potash Flakes", specs: "Potassium-based alkali for industry"},
+                    {name: "Potassium Carbonate", specs: "Glassmaking, detergents, agro-chemicals"},
+                    {name: "Hydrochloric Acid", specs: "pH control and metal treatment"},
+                    {name: "Sodium Silicate + Sodium Metasilicate", specs: "Industrial cleaning & detergent blends"},
+                    {name: "Tablet and Granular Industrial Water Treatment", specs: "Scale inhibition & disinfection"},
+                    {name: "Filtration Earths, Bleaching Earths", specs: "Oil purification & filtration media"},
+                    {name: "Silica & Silica Gel", specs: "Moisture absorption and chromatography"},
+                    {name: "Phenolic Resin", specs: "Adhesives, molding compounds & coatings"},
+                    {name: "Coating Fat (Cocoa Butter Replacement)", specs: "Confectionery fat for coatings"}
+                ]
+            },
+            {
+                title: {eng: "Dairy Products", es: "Productos Lácteos"},
+                desc: {eng: "Premium dairy ingredients and protein concentrates", es: "Ingredientes lácteos premium y concentrados de proteína"},
+                products: [
+                    {name: "Sweet Whey Powder", specs: "Food ingredient"},
+                    {name: "Deprotenized Whey Powder (Pearmeate)", specs: "Food ingredient"},
+                    {name: "Lactose", specs: "Pharma & food grade"},
+                    {name: "Full Cream Milk Powder", specs: "Reconstitution"},
+                    {name: "Skim Milk Powder", specs: "Low fat applications"},
+                    {name: "Whey Protein Isolate", specs: "90%+ protein"},
+                    {name: "Whey Protein Concentrate", specs: "35-80% protein"},
+                    {name: "Instant Fat Filled Powder", specs: "Food ingredient"}
+                ]
+            },
+            {
+                title: {eng: "Food & Pharma Packaging", es: "Empaque Alimentario y Farmacéutico"},
+                desc: {eng: "Glass, rigid and flexible packaging for food and pharmaceuticals", es: "Embalaje de vidrio, rígido y flexible para alimentos y farmacéuticos"},
+                products: [
+                    {name: "Pharma Glass Vials", specs: "SGD Pharma - Type I, II, III"},
+                    {name: "Glass Ampoules", specs: "Injectable grade"},
+                    {name: "Blister Foil", specs: "Unit dose packaging"},
+                    {name: "Flexible Laminates", specs: "Multi-layer films"},
+                    {name: "Printed aluminium blister foil", specs: "Pharma-grade printed blister foil"},
+                    {name: "Printed aluminium/PE strip foil", specs: "Strip packaging for tablets/capsules"},
+                    {name: "PVC/PVDC blister foils", specs: "High-barrier thermoforming films"},
+                    {name: "Polyester / Alu / PE", specs: "High-barrier multilayer laminate"},
+                    {name: "Printed pouch laminates", specs: "Custom printed flexible pouches"},
+                    {name: "OPP and PET laminates", specs: "Food-grade transparent laminates"},
+                    {name: "Printed paper, film and foil wraps", specs: "Food & confectionery wrapping"},
+                    {name: "Metalized paper and boards", specs: "Decorative and barrier packaging"},
+                    {name: "Printed aluminium-foil lids and lidding rolls", specs: "Dairy and food sealing lids"},
+                    {name: "Printed butter wraps", specs: "Grease-resistant food wraps"},
+                    {name: "Printed PE milk foils", specs: "Sealing foils for milk bottles"},
+                    {name: "Printed laminates for milk powder pouches", specs: "High-barrier milk powder packaging"},
+                    {name: "Pure aluminium foil for chocolate wrapping", specs: "Food-safe decorative foil"},
+                    {name: "Coffee Paper", specs: "Brewing filtration and coffee packaging"}
+                ]
+            },
+            {
+                title: {eng: "Crop Protection", es: "Protección de Cultivos"},
+                desc: {eng: "Agricultural solutions for enhanced crop yields", es: "Soluciones agrícolas para mejorar rendimientos"},
+                products: [
+                    {name: "Herbicides", specs: "Weed control"},
+                    {name: "Insecticides", specs: "Pest management"},
+                    {name: "Fungicides", specs: "Disease prevention"},
+                    {name: "Growth Regulators", specs: "Yield optimization"}
+                ]
+            },
+            {
+                title: {eng: "Lumber & Wood Products", es: "Maderas"},
+                desc: {eng: "Extensive range from leading Brazilian and global mills", es: "Amplia gama de las principales fábricas brasileñas y globales"},
+                products: [
+                    {name: "Cedar Plywood", specs: "Lightweight, aromatic softwood plywood"},
+                    {name: "Cedromara Lumber", specs: "High-quality Brazilian hardwood"},
+                    {name: "Cerejeira Lumber", specs: "Light hardwood for furniture"},
+                    {name: "Cerejeira Plywood", specs: "Decorative hardwood plywood"},
+                    {name: "Cumaru Lumber", specs: "Dense hardwood for decking & structures"},
+                    {name: "Elliottii Pine Formply", specs: "Film-coated for concrete forming"},
+                    {name: "Elliottii Pine Plywood", specs: "Structural construction-grade plywood"},
+                    {name: "Film Faced Plywood", specs: "Water-resistant, construction formwork"},
+                    {name: "HDF Board", specs: "High-density fibreboard"},
+                    {name: "Hardboard", specs: "Standard hardboard for paneling"},
+                    {name: "HDF Hidrofugo", specs: "Moisture-resistant HDF"},
+                    {name: "Ipe Lumber", specs: "Premium dense hardwood for decking"},
+                    {name: "Jequitiba Lumber", specs: "Fine-textured hardwood for interiors"},
+                    {name: "Jequitiba Plywood", specs: "Decorative plywood option"},
+                    {name: "Marupá Lumber", specs: "Light softwood for general use"},
+                    {name: "MDF Board", specs: "Medium-density fibreboard"},
+                    {name: "MDF Hidrofugo", specs: "Moisture-resistant MDF"},
+                    {name: "Melamine faced MDF board", specs: "Pre-laminated furniture panels"},
+                    {name: "Melamine faced MDP board", specs: "Melamine-coated particleboard"},
+                    {name: "Standard Hardboard", specs: "General-purpose hardboard"},
+                    {name: "Standard MDF Board", specs: "Standard medium-density MDF"},
+                    {name: "Virola Plywood", specs: "Light tropical hardwood plywood"},
+                    {name: "White Virola", specs: "Light-colored virola plywood"},
+                    {name: "Wood Veneer Edge Tape Rolls", specs: "Veneer finishing edges"},
+                    {name: "Wood Veneered MDF Board", specs: "MDF with natural wood veneer"}
+                ]
+            },
+            {
+                title: {eng: "Glass Solutions", es: "Soluciones de Vidrio"},
+                desc: {eng: "Exclusive Saint-Gobain France representative", es: "Representante exclusivo de Saint-Gobain Francia"},
+                products: [
+                    {name: "Float Glass", specs: "Clear & tinted"},
+                    {name: "Tempered Glass", specs: "Safety glass"},
+                    {name: "Laminated Glass", specs: "Security applications"},
+                    {name: "Low-E Glass", specs: "Energy efficient"}
+                ]
+            },
+            {
+                title: {eng: "Industrial Machinery", es: "Maquinaria Industrial"},
+                desc: {eng: "Specialized packaging and processing equipment", es: "Equipos especializados de empaque y procesamiento"},
+                products: [
+                    {name: "Filling Machines", specs: "Liquid & powder"},
+                    {name: "Sealing Equipment", specs: "Container sealing"},
+                    {name: "Labeling Machines", specs: "Automated"},
+                    {name: "Conveyor Systems", specs: "Material handling"}
+                ]
+            },
+            {
+                title: {eng: "Steel & Metals", es: "Acero y Metales"},
+                desc: {eng: "Steel and metal products from leading global mills", es: "Productos de acero y metales de fábricas globales líderes"},
+                products: [
+                    {name: "Hot Rolled Steel", specs: "Structural"},
+                    {name: "Cold Rolled Steel", specs: "Precision"},
+                    {name: "Galvanized Steel", specs: "Corrosion protection"},
+                    {name: "Stainless Steel", specs: "Food & pharma grade"}
+                ]
+            }
+        ];
+
         const navbar = document.getElementById('navbar');
         const languageToggle = document.getElementById('language-toggle');
         const scrollTopBtn = document.getElementById('scroll-top');
         const contactForm = document.getElementById('contact-form');
-        const elementsToTranslate = document.querySelectorAll('[data-eng], [data-es]');
+        const productSearch = document.getElementById('product-search');
+        const industryAccordion = document.getElementById('industry-accordion');
+        const noResults = document.getElementById('no-results');
         
         let currentLanguage = 'eng';
         let ticking = false;
 
-        // Optimized smooth scrolling
+        function renderIndustries(filterText = '') {
+            industryAccordion.innerHTML = '';
+            let visibleCount = 0;
+
+            industries.forEach(industry => {
+                const titleText = industry.title[currentLanguage];
+                const descText = industry.desc[currentLanguage];
+                
+                const matchesFilter = !filterText || 
+                    titleText.toLowerCase().includes(filterText.toLowerCase()) ||
+                    descText.toLowerCase().includes(filterText.toLowerCase()) ||
+                    industry.products.some(p => p.name.toLowerCase().includes(filterText.toLowerCase()));
+
+                if (!matchesFilter) return;
+                visibleCount++;
+
+                const div = document.createElement('div');
+                div.className = 'industry-item';
+                div.innerHTML = `
+                    <div class="industry-header" onclick="toggleIndustry(this)">
+                        <div>
+                            <div class="industry-title-row">
+                                <h3>${titleText}</h3>
+                                <span class="product-count">${industry.products.length} ${currentLanguage === 'eng' ? 'products' : 'productos'}</span>
+                            </div>
+                            <p class="industry-desc">${descText}</p>
+                        </div>
+                        <i class="fas fa-chevron-down industry-toggle"></i>
+                    </div>
+                    <div class="industry-content">
+                        <div class="materials-grid">
+                            ${industry.products.map(p => `
+                                <div class="material-item">
+                                    <h5>${p.name}</h5>
+                                    <span class="material-specs">${p.specs}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                industryAccordion.appendChild(div);
+            });
+
+            noResults.classList.toggle('visible', visibleCount === 0);
+        }
+
+        function toggleIndustry(header) {
+            const content = header.nextElementSibling;
+            const isActive = header.classList.contains('active');
+            
+            if (isActive) {
+                header.classList.remove('active');
+                content.classList.remove('active');
+                content.style.maxHeight = '0';
+            } else {
+                header.classList.add('active');
+                content.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+
+        let searchTimeout;
+        productSearch.addEventListener('input', e => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => renderIndustries(e.target.value), 300);
+        });
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const offsetTop = target.offsetTop - 80;
                     window.scrollTo({
-                        top: offsetTop,
+                        top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Throttled scroll handler for better performance
         function updateOnScroll() {
             const scrollTop = window.pageYOffset;
-            
-            // Navbar effects
-            if (scrollTop > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-            
-            // Scroll to top button
-            if (scrollTop > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-            
+            navbar.classList.toggle('scrolled', scrollTop > 100);
+            scrollTopBtn.classList.toggle('visible', scrollTop > 300);
             ticking = false;
         }
 
@@ -1588,77 +1373,36 @@ Our commitment is to deliver exceptional service and quality products combined w
             }
         }
 
-        window.addEventListener('scroll', requestTick, { passive: true });
+        window.addEventListener('scroll', requestTick, {passive: true});
 
-        // Language toggle functionality
         languageToggle.addEventListener('click', () => {
             currentLanguage = currentLanguage === 'eng' ? 'es' : 'eng';
             
-            elementsToTranslate.forEach(element => {
-                if (currentLanguage === 'es' && element.dataset.es) {
-                    element.innerHTML = element.dataset.es;
-                } else if (currentLanguage === 'eng' && element.dataset.eng) {
-                    element.innerHTML = element.dataset.eng;
-                }
+            document.querySelectorAll('[data-eng], [data-es]').forEach(el => {
+                const text = el.dataset[currentLanguage];
+                if (text) el.innerHTML = text;
+            });
+
+            document.querySelectorAll('[data-eng-placeholder], [data-es-placeholder]').forEach(el => {
+                const key = currentLanguage === 'eng' ? 'engPlaceholder' : 'esPlaceholder';
+                if (el.dataset[key]) el.placeholder = el.dataset[key];
             });
             
             languageToggle.innerHTML = currentLanguage === 'eng' ? 
                 '<i class="fas fa-globe"></i> ES | EN' : 
                 '<i class="fas fa-globe"></i> EN | ES';
+
+            renderIndustries(productSearch.value);
         });
 
-        // Scroll to top
         scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
 
-        // Much more aggressive intersection observer settings for fast loading
-        const fastObserverOptions = {
-            threshold: 0.05,  // Trigger much earlier
-            rootMargin: '100px 0px 0px 0px'  // Start animation when element is 100px from viewport
-        };
-
-        const fastObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    // Stop observing once animated for better performance
-                    fastObserver.unobserve(entry.target);
-                }
-            });
-        }, fastObserverOptions);
-
-        // Only observe elements that are not in initial viewport and on desktop
-        function setupAnimations() {
-            const isMobile = window.innerWidth <= 768;
-            
-            document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
-                const rect = el.getBoundingClientRect();
-                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-                
-                // On mobile or if element is in initial viewport, show immediately
-                if (isMobile || isInViewport) {
-                    el.classList.add('animate');
-                } else {
-                    // Only animate elements that are below the fold on desktop
-                    fastObserver.observe(el);
-                }
-            });
-        }
-
-        // Initialize animations after DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', setupAnimations);
-        } else {
-            setupAnimations();
-        }
-
-        // Form submission with better UX
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            document.querySelectorAll('.form-error').forEach(el => el.classList.remove('visible'));
             
             const formData = new FormData(this);
             const name = formData.get('name').trim();
@@ -1666,248 +1410,62 @@ Our commitment is to deliver exceptional service and quality products combined w
             const company = formData.get('company').trim();
             const message = formData.get('message').trim();
             
-            if (!name || !email || !company || !message) {
-                alert(currentLanguage === 'es' ? 
-                    'Por favor complete todos los campos.' : 
-                    'Please fill in all fields.');
-                return;
+            let hasError = false;
+
+            if (!name) {
+                document.getElementById('name-error').classList.add('visible');
+                hasError = true;
             }
             
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert(currentLanguage === 'es' ? 
-                    'Por favor ingrese un correo electrónico válido.' : 
-                    'Please enter a valid email address.');
-                return;
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById('email-error').classList.add('visible');
+                hasError = true;
             }
+            
+            if (!company) {
+                document.getElementById('company-error').classList.add('visible');
+                hasError = true;
+            }
+            
+            if (!message) {
+                document.getElementById('message-error').classList.add('visible');
+                hasError = true;
+            }
+
+            if (hasError) return;
             
             const submitBtn = this.querySelector('.btn');
-            const originalText = submitBtn.innerHTML;
+            const originalHTML = submitBtn.innerHTML;
             
-            submitBtn.innerHTML = currentLanguage === 'es' ? 
-                '<i class="fas fa-spinner fa-spin"></i> Enviando...' : 
-                '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + 
+                (currentLanguage === 'es' ? 'Enviando...' : 'Sending...');
             submitBtn.disabled = true;
             
             setTimeout(() => {
-                alert(currentLanguage === 'es' ? 
-                    '¡Mensaje enviado exitosamente! Nos pondremos en contacto con usted pronto.' : 
-                    'Message sent successfully! We will contact you soon.');
-                
+                document.getElementById('form-success').classList.add('visible');
                 this.reset();
-                submitBtn.innerHTML = originalText;
+                submitBtn.innerHTML = originalHTML;
                 submitBtn.disabled = false;
-            }, 1500); // Reduced timeout for better UX
-        });
-
-        // Preload critical resources
-        const preloadLink = document.createElement('link');
-        preloadLink.rel = 'preload';
-        preloadLink.href = 'logo-no-background.png';
-        preloadLink.as = 'image';
-        document.head.appendChild(preloadLink);
-
-        // Remove loading delays
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-        });
-
-        // Optimize for reduced motion preferences
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.animate-on-scroll').forEach(el => {
-                el.classList.add('animate');
-            });
-        }
-
-        // Clean up observers on page unload
-        window.addEventListener('beforeunload', () => {
-            if (fastObserver) {
-                fastObserver.disconnect();
-            }
-        });
-
-        // Industry accordion functionality
-        function toggleIndustry(header) {
-            const content = header.nextElementSibling;
-            const isActive = header.classList.contains('active');
-        
-            
-            // Toggle current accordion
-            if (isActive) {
-                header.classList.remove('active');
-                content.classList.remove('active');
-                content.style.maxHeight = '0px';
-            } else {
-                header.classList.add('active');
-                content.classList.add('active');
-                // Dynamically set max-height based on actual content height
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        }
-
-        // Add sample material data function (for future use)
-       function addMaterialsToIndustry(industryIndex, materialsData) {
-            const industryItems = document.querySelectorAll('.industry-item');
-            if (industryItems[industryIndex]) {
-                const content = industryItems[industryIndex].querySelector('.industry-content');
-                const materialsGrid = document.createElement('div');
-                materialsGrid.className = 'materials-grid';
                 
-                materialsData.forEach(material => {
-                    const materialItem = document.createElement('div');
-                    materialItem.className = 'material-item';
-                    materialItem.innerHTML = `
-                        <h4>${material.name}</h4>
-                        `;
-                    materialsGrid.appendChild(materialItem);
-                });
-                
-                content.innerHTML = '';
-                content.appendChild(materialsGrid);
-            }
-        }
+                setTimeout(() => {
+                    document.getElementById('form-success').classList.remove('visible');
+                }, 5000);
+            }, 1500);
+        });
 
-
-        addMaterialsToIndustry(0, [
-            {name: '(HDPE) High Density Polyethylene Blow Molding'},
-            {name: '(HDPE) High Density Polyethylene Injection Molding'},
-            {name: '(HDPE) High Density Polyethylene Film'},
-            {name: '(LDPE) Low Density Polyethylene'},
-            {name: '(LLDPE) Linear Low Density Polyethylene'},
-            {name: '(mLLDPE) Metallocene'},
-            {name: 'PET'},
-            {name: 'PVC'},
-            {name: '(PP) Polypropylene Homopolymer, Copolymer, Block polymer'},
-            {name: 'Rotomolding'}
-        ]);
-
-        addMaterialsToIndustry(1, [
-            {name: 'Bleached Semi-Extensible Sack Kraft'}, 
-            {name: 'Bond Paper'},
-            {name: 'Butter Wrap Paper'}, 
-            {name: 'C1S / C2S'}, 
-            {name: 'Carbonless Paper'}, 
-            {name: 'Carrier Board'}, 
-            {name: 'CCKB - Clay coated kraft'}, 
-            {name: 'Cigarette Packaging Paper'}, 
-            {name: 'Clay Coated News Board (CCNB)'}, 
-            {name: 'Coasterboard'}, 
-            {name: 'Coated Folding Box Board (FBB, GC1)'}, 
-            {name: 'Coated Kraftback Board'}, 
-            {name: 'Coated Whiteback Board'},
-            {name: 'Coffee Filter Paper'}, 
-            {name: 'Core Board'}, 
-            {name: 'Duplex Board'}, 
-            {name: 'Fluting'},
-            {name: 'Golden Kraft'}, 
-            {name: 'Greaseproof Paper & Board'}, 
-            {name: 'Grey Board'}, 
-            {name: 'Kraft Liner / Kraft Paper'}, 
-            {name: 'Laid paper'}, 
-            {name: 'Manila Folder'}, 
-            {name: 'MF Unbleached Kraft Paper'},
-            {name: 'MG Unbleached Kraft Paper'},
-            {name: 'MG Bleached Kraft Paper'},
-            {name: 'MG Bleached Tissue Paper'},
-            {name: 'Napkin Paper'},
-            {name: 'Security paper'}, 
-            {name: 'Testliner'}, 
-            {name: 'Thermal Paper'},
-            {name: 'Toiltet Tissue Paper'},
-            {name: 'Towel Tissue Paper'},
-            {name: 'Two Side Coated Woodfree Paper'},
-            {name: 'Uncoated Woodfree Paper'},
-            {name: 'Unbleached Semi-Extensible Sack Kraft'}, 
-            {name: 'Wet Strength Carrier Board'}, 
-            {name: 'White Opaline'}
-        ]);
-
-        addMaterialsToIndustry(2, [
-            {name: 'Toluene Diisocyanate'},
-            {name: 'Sodium Silicate'},
-            {name: 'Sodium Metasilicate Penta'},
-            {name: 'Caustic Soda Liquid'},
-            {name: 'DOTP (Dioctyl Terephthalate)'},
-            {name: 'DOP (Dioctyl Phthalate)'},
-            {name: 'Caustic Potash Flakes'},
-            {name: 'Potassium Carbonate'},
-            {name: 'Hydrochloric Acid'},
-            {name: 'Sodium Silicate + Sodium Metasilicate'},
-            {name: 'Tablet and Granular Industrial Water Treatment'},
-            {name: 'Filtration Earths, Bleaching Earths'},
-            {name: 'Silica & Silica Gel'},
-            {name: 'Phenolic Resin'},
-            {name: 'Coating Fat (Cocoa Butter Replacement)'}
-        ]);
-
-        addMaterialsToIndustry(3,[
-            {name: 'Sweet Whey Powder'},
-            {name: 'Lactose'},
-            {name: 'Full Cream Milk Powder (FCMP)'},
-            {name: 'Skim Milk Powder (SMP)'},
-            {name: 'Whey Protein Isolate (WPI)'},
-            {name: 'Whey Protein Concentrate (WPC)'},
-            {name: 'Deprotenized Whey Powder (Permate)'}, 
-            {name: 'Instant Fat Filled Powder'}, 
-            {name: 'Anhydrous Milkfat'}
-
-        ]);
-
-        addMaterialsToIndustry(4,[
-            {name: 'Pharmaceutical Glass Vials (SGD Pharma)'},
-            {name: 'Pharmaceutical Glass Ampoules (SGD Pharma)'},
-            {name: 'Printed aluminium blister foil'},
-            {name: 'Printed aluminium/PE strip foil'},
-            {name: 'PVC/PVDC blister foils'},
-            {name: 'Polyester / Alu / PE'},
-            {name: 'Printed pouch laminates'},
-            {name: 'OPP and PET laminates'},
-            {name: 'Printed paper, film and foil wraps'},
-            {name: 'Metalized paper and boards'},
-            {name: 'Printed aluminium-foil lids and lidding rolls'},
-            {name: 'Printed butter wraps'},
-            {name: 'Printed PE milk foils'},
-            {name: 'Printed laminates for milk powder pouches'},
-            {name: 'Pure aluminium foil for chocolate wrapping'},
-            {name: 'Coffee Paper'}
-        ])
-
-        addMaterialsToIndustry(6,[
-            {name:'Cedar Plywood'},
-            {name:'Cedromara Lumber'},
-            {name:'Cerejeira Lumber'},
-            {name:'Cerejeira Plywood'},
-            {name:'Cumaru Lumber'},
-            {name:'Elliottii Pine Formply'},
-            {name:'Elliottii Pine Plywood'},
-            {name:'Film Faced Plywood'},
-            {name:'HDF Board'},
-            {name:'Hardboard'},
-            {name:'HDF Hidrofugo'},
-            {name:'Ipe Lumber'},
-            {name:'Jequitiba Lumber'},
-            {name:'Jequitiba Plywood'},
-            {name:'Marupá Lumber'},
-            {name:'MDF Board'},
-            {name:'MDF Hidrofugo'},
-            {name:'Melamine faced MDF board'},
-            {name:'Melamine faced MDP board'},
-            {name:'Standard Hardboard'},
-            {name:'Standard MDF Board'},
-            {name:'Virola Plywood'},
-            {name:'White Virola'},
-            {name:'Wood Veneer Edge Tape Rolls'},
-            {name:'Wood Veneered MDF Board'}
-        ])
-
-
-
-        // Example usage (you can call this function later to add materials):
-        // addMaterialsToIndustry(0, [
-        //     {name: 'LDPE', description: 'Low-density polyethylene for film applications'},
-        //     {name: 'HDPE', description: 'High-density polyethylene for containers'},
-        //     {name: 'PP', description: 'Polypropylene for various molding applications'}
-        // ]);
+        document.addEventListener('DOMContentLoaded', () => renderIndustries());
     </script>
 </body>
 </html>
+                        <p class="differentiator-desc" data-eng="Direct partnerships with leading manufacturers worldwide" data-es="Asociaciones directas con fabricantes líderes mundialmente">Direct partnerships with leading manufacturers worldwide</p>
+                    </div>
+
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon"><i class="fas fa-handshake"></i></div>
+                        <h3 class="differentiator-title" data-eng="Local Expertise" data-es="Experiencia Local">Local Expertise</h3>
+                        <p class="differentiator-desc" data-eng="50+ years of deep market knowledge in the Dominican Republic" data-es="50+ años de conocimiento del mercado dominicano">50+ years of deep market knowledge in the Dominican Republic</p>
+                    </div>
+
+                    <div class="differentiator-card">
+                        <div class="differentiator-icon"><i class="fas fa-cogs"></i></div>
+                        <h3 class="
