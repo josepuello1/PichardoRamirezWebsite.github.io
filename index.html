@@ -602,6 +602,40 @@
             }
         }
 
+        @media (max-width: 768px) {
+            /* ... existing .materials-grid rule for mobile ... */
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* NEW/MODIFIED RULES for compact view */
+            .material-item {
+                padding: 0.75rem; /* Reduced padding from 1rem to 0.75rem */
+            }
+
+            .material-item h5 {
+                font-size: 0.9rem; /* Reduced font size from 1rem to 0.9rem */
+                margin: 0 0 0.15rem 0; /* Reduced margin */
+            }
+
+            .material-specs {
+                font-size: 0.75rem; /* Reduced font size from 0.85rem to 0.75rem */
+            }
+
+            /* Reduced header padding for more space */
+            .industry-header {
+                padding: 1rem 1.5rem; /* Reduced padding from 1.5rem 2rem */
+            }
+
+            .industry-title-row h3 {
+                font-size: 1.1rem; /* Reduced font size from 1.3rem */
+            }
+
+            .industry-content.active {
+                padding: 1rem 1.5rem 2rem; /* Reduced padding from 1.5rem 2rem 2.5rem */
+            }
+        }
+
         .legacy-section {
             background: linear-gradient(135deg, var(--surface-accent) 0%, var(--surface-secondary) 100%);
         }
