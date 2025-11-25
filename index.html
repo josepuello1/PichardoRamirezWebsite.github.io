@@ -296,7 +296,7 @@
 
         @media (max-width: 768px) {
         .container {
-            padding: 0 0.5rem;  /* ← CHANGE THIS */
+            padding: 0 1rem;  /* ← CHANGE THIS */
             }
         }
 
@@ -707,7 +707,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             max-width: 1200px;
-            margin: 0 auto; /* ← ADD THIS to help with mobile screen cutoff*/
             padding: 0;
             width: 100%;                    /* ← ADD THIS */
             box-sizing: border-box;         /* ← ADD THIS */
@@ -717,6 +716,11 @@
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+                padding: 0; /*add this for mobile cutoff*/
+            }
+            .contact-info,
+            .contact-form {
+                padding: 1.5rem;  /* ← Reduce internal padding */
             }
         }
 
@@ -785,7 +789,6 @@
             border-radius: 16px;
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
-            padding: 1.5rem;
         }
 
         .form-group {
