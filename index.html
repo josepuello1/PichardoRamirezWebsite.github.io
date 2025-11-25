@@ -43,6 +43,21 @@
             color: var(--text-dark);
             background-color: var(--surface);
             overflow-x: hidden;
+            width: 100%; /* added */
+            max-width: 100vw; /* added */
+        }
+
+                /* ADD THIS ENTIRE NEW RULE */
+                /* Prevent horizontal overflow on all major containers */
+        header,
+        nav,
+        section,
+        footer,
+        .hero-section,
+        .stats-bar,
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         header {
@@ -156,6 +171,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;                    /* ← ADD THIS */
+            max-width: 100vw;               /* ← ADD THIS */
+            overflow-x: hidden;             /* ← ADD THIS */
+        }
+
+        /* ADD THIS NEW MEDIA QUERY */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 6rem 1rem;
+                min-height: 80vh;
+            }
         }
 
         .hero-section::before {
@@ -215,6 +241,10 @@
             color: white;
             padding: 3rem 2rem;
             text-align: center;
+            width: 100%;                    /* ← ADD THIS */
+            max-width: 100vw;               /* ← ADD THIS */
+            overflow-x: hidden;             /* ← ADD THIS */
+            box-sizing: border-box;         /* ← ADD THIS */
         }
 
         .stats-container {
@@ -223,6 +253,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
+            width: 100%;                    /* ← ADD THIS */
+            box-sizing: border-box;         /* ← ADD THIS */
         }
 
         .stat-number {
@@ -231,16 +263,23 @@
             color: var(--accent-color);
             margin-bottom: 0.5rem;
             font-family: 'Playfair Display', serif;
+            word-break: break-word;  /* ← Important for overflow prevention */
         }
 
         .stat-label {
             font-size: 1rem;
             opacity: 0.9;
+            word-break: break-word;         /* ← Important for overflow prevention */
         }
 
         @media (max-width: 768px) {
+            .stats-bar {                    /* ← ADD THIS RULE */
+                padding: 2rem 1rem;
+            }
+
             .stats-container {
                 grid-template-columns: 1fr 1fr;
+                gap: 1rem;  /* ← ADD THIS RULE */
             }
             .stat-number {
                 font-size: 2rem;
@@ -250,16 +289,22 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 2rem;  
+            width: 100%;  /* ← ADD THIS */
+            box-sizing: border-box;  /* ← ADD THIS */
         }
 
         .section {
             padding: 5rem 0;
+            width: 100%;                    /* ← ADD THIS */
+            max-width: 100vw;               /* ← ADD THIS */
+            overflow-x: hidden;             /* ← ADD THIS */
+            box-sizing: border-box;         /* ← ADD THIS */
         }
 
         @media (max-width: 768px) {
             .section {
-                padding: 3rem 0;
+                padding: 0 1rem;
             }
         }
 
@@ -305,6 +350,16 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
+            width: 100%;                    /* ← ADD THIS */
+            box-sizing: border-box;         /* ← ADD THIS */
+        }
+
+        /* ADD THIS NEW MEDIA QUERY */
+        @media (max-width: 768px) {
+            .key-differentiators {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
         }
 
         .differentiator-card {
@@ -646,6 +701,8 @@
             gap: 3rem;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;                    /* ← ADD THIS */
+            box-sizing: border-box;         /* ← ADD THIS */
         }
 
         @media (max-width: 768px) {
