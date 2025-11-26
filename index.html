@@ -1140,7 +1140,7 @@
                                 <i class="fas fa-phone"></i>
                                 <span>+1 (809) 542-6929</span>
                             </a>
-                            <a href="mailto:recepcion@pichardoramirez.com" class="contact-detail-item">
+                            <a href="mailto:josepichardo93@hotmail.com" class="contact-detail-item">
                                 <i class="fas fa-envelope"></i>
                                 <span>recepcion@pichardoramirez.com</span>
                             </a>
@@ -1156,7 +1156,7 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form" id="contact-form">
+                    <form class="contact-form" id="contact-form" onsubmit="return handleFormSubmission(event, 'josee@pichardoramirez.com,fernandop@pichardoramirez.com,fernando@pichardoramirez.com')">
                         <div class="form-success" id="form-success">
                             <i class="fas fa-check-circle"></i>
                             <span data-eng="Thank you! We'll respond within 24 hours." data-es="¡Gracias! Responderemos en 24 horas.">Thank you! We'll respond within 24 hours.</span>
@@ -1581,5 +1581,56 @@
         });
 
         document.addEventListener('DOMContentLoaded', () => renderIndustries());
+
+                /**
+         * Handles the form submission by constructing a mailto link
+         * with the form data and opening the user's default email client.
+         * @param {Event} event - The form submission event.
+         * @param {string} recipientEmail - The target email address.
+         */
+        function handleFormSubmission(event, recipientEmail) {
+            // 1. Prevent the default HTTP form submission
+            event.preventDefault();
+
+            const form = document.getElementById('contact-form');
+            const name = form.elements['name'].value.trim();
+            const email = form.elements['email'].value.trim();
+            const subject = form.elements['subject'].value.trim();
+            const message = form.elements['message'].value.trim();
+
+            // 2. Simple validation (You should use the more robust validation from a previous step, but this is the core logic)
+            if (!name || !email || !subject || !message) {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            // 3. Encode values for the URL (crucial for spaces and special characters)
+            const encodedName = encodeURIComponent(name);
+            const encodedEmail = encodeURIComponent(email);
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedMessage = encodeURIComponent(
+                `From: ${name} <${email}>\n\n---\n\n${message}`
+            );
+            
+            // 4. Construct the mailto link
+            // We put the user's contact info inside the body for clarity,
+            // and use their subject line as the email subject.
+            const mailtoLink = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedMessage}`;
+
+            // 5. Open the email client
+            window.location.href = mailtoLink;
+
+            // Optional: Show success message briefly before the mail client opens
+            const successMessage = document.getElementById('form-success');
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                form.reset(); // Clear the form after submission
+            }, 3000); 
+
+            // Return false to ensure no standard form action proceeds
+            return false;
+        }
+
     </script>
 </body>
