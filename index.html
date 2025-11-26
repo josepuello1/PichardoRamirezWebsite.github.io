@@ -224,6 +224,20 @@
             overflow-x: hidden;             /* ← ADD THIS */
         }
 
+        /* Add this new block to your CSS */
+
+        @media (min-width: 769px) {
+            .hero-section {
+                /* 1. Reduce the height for desktop */
+                /* Change from 100vh to a smaller value, e.g., 75vh or 60vh */
+                min-height: 70vh; 
+                
+                /* 2. Reduce the large top/bottom padding for desktop */
+                /* Change from 8rem 2rem to a smaller vertical padding */
+                padding: 6rem 2rem; 
+            }
+        }
+
         /* ADD THIS NEW MEDIA QUERY */
         @media (max-width: 768px) {
             .hero-section {
