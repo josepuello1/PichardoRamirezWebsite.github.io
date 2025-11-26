@@ -970,6 +970,24 @@
         .no-results.visible {
             display: block;
         }
+
+        .product-showcase-img {
+            width: 100%;
+            height: auto; /* Maintains aspect ratio for desktop & mobile */
+            border-radius: 16px; /* Matches your site's rounded corners */
+            box-shadow: var(--shadow); /* Matches your site's depth */
+            margin-bottom: 3rem; /* Spacing between image and the accordion */
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Optional: Adds a hover effect similar to your other cards */
+        .product-showcase-img:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
     </style>
 </head>
 <body>
@@ -1063,6 +1081,7 @@
                     </div>
                     <p id="expand-hint" style="text-align: center; margin-top: 0.5rem; color: var(--text-light); font-size: 0.9rem; cursor: pointer;" data-eng="Click/Press an Industry to expand categories" data-es="Haga clic/Presione en una Industria para expandir categorías">Click/Press an Industry to expand categories</p>
                 </div>
+                <img src="products.jpg" alt="Industrial Products Overview" class="product-showcase-img">
 
                 <div class="industry-accordion" id="industry-accordion"></div>
 
