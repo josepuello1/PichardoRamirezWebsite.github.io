@@ -1156,7 +1156,7 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form" id="contact-form" onsubmit="return handleFormSubmission(event, 'josee@pichardoramirez.com,fernandop@pichardoramirez.com,fernando@pichardoramirez.com')">
+                    <form class="contact-form" id="contact-form" onsubmit="return handleFormSubmission(event, 'josepichardo93@hotmail.com,fernandop@pichardoramirez.com,fernando@pichardoramirez.com')">
                         <div class="form-success" id="form-success">
                             <i class="fas fa-check-circle"></i>
                             <span data-eng="Thank you! We'll respond within 24 hours." data-es="¡Gracias! Responderemos en 24 horas.">Thank you! We'll respond within 24 hours.</span>
@@ -1582,7 +1582,7 @@
 
         document.addEventListener('DOMContentLoaded', () => renderIndustries());
 
-                /**
+        /**
          * Handles the form submission by constructing a mailto link
          * with the form data and opening the user's default email client.
          * @param {Event} event - The form submission event.
@@ -1593,42 +1593,55 @@
             event.preventDefault();
 
             const form = document.getElementById('contact-form');
+            // Get all form values
             const name = form.elements['name'].value.trim();
             const email = form.elements['email'].value.trim();
-            const subject = form.elements['subject'].value.trim();
+            // 🟢 ADDED: Company name
+            const company = form.elements['company'].value.trim();
+            // 🔴 REMOVED: const subject = form.elements['subject'].value.trim(); (Subject field was removed from HTML)
             const message = form.elements['message'].value.trim();
 
-            // 2. Simple validation (You should use the more robust validation from a previous step, but this is the core logic)
-            if (!name || !email || !subject || !message) {
-                alert("Please fill in all required fields.");
+            // Define a default subject line since the user doesn't enter one explicitly
+            const defaultSubject = `New Inquiry from ${name} (${company})`;
+
+            // 2. Updated Validation 
+            // 🟢 ADDED: company to the check
+            if (!name || !email || !company || !message) {
+                // You can use your more robust error display here if you prefer
+                alert("Please fill in all required fields: Name, Email, Company, and Message.");
                 return false;
             }
 
-            // 3. Encode values for the URL (crucial for spaces and special characters)
-            const encodedName = encodeURIComponent(name);
-            const encodedEmail = encodeURIComponent(email);
-            const encodedSubject = encodeURIComponent(subject);
-            const encodedMessage = encodeURIComponent(
-                `From: ${name} <${email}>\n\n---\n\n${message}`
-            );
+            // 3. Encode values for the URL
+            const encodedSubject = encodeURIComponent(defaultSubject);
+            
+            // Construct the email body with all relevant info. 
+            // Note: Use '\r\n' for cross-platform line breaks in mailto bodies.
+            const bodyContent = 
+                `Sender Name: ${name}\r\n` + 
+                `Sender Email: ${email}\r\n` +
+                `Company: ${company}\r\n\r\n` +
+                `--- Inquiry Message ---\r\n\r\n` + 
+                `${message}`;
+
+            const encodedBody = encodeURIComponent(bodyContent);
             
             // 4. Construct the mailto link
-            // We put the user's contact info inside the body for clarity,
-            // and use their subject line as the email subject.
-            const mailtoLink = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedMessage}`;
+            // The subject is now fixed, and the body contains the user's data.
+            const mailtoLink = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedBody}`;
 
             // 5. Open the email client
             window.location.href = mailtoLink;
 
             // Optional: Show success message briefly before the mail client opens
             const successMessage = document.getElementById('form-success');
-            successMessage.style.display = 'block';
+            // Use class list method for better control, assuming you have a CSS class 'visible'
+            successMessage.classList.add('visible'); 
             setTimeout(() => {
-                successMessage.style.display = 'none';
-                form.reset(); // Clear the form after submission
+                successMessage.classList.remove('visible');
+                form.reset(); // Clear the form after opening the mail client
             }, 3000); 
 
-            // Return false to ensure no standard form action proceeds
             return false;
         }
 
