@@ -990,13 +990,14 @@
 
         /* Sticky Contact Bar */
         .sticky-contact-bar {
-            background: var(--accent-color);
+            background: rgba(30, 41, 59, 0.75);         
+            backdrop-filter: blur(10px);
             color: white;
             padding: 0.75rem 1rem;
             text-align: center;
             font-size: 0.95rem;
             font-weight: 500;
-            position: sticky;
+            position: relative;
             top: 0;
             z-index: 10000;
             box-shadow: var(--shadow);
