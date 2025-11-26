@@ -988,9 +988,144 @@
             transition: all 0.3s ease;
         }
 
+        /* Sticky Contact Bar */
+        .sticky-contact-bar {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .sticky-contact-bar a {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .sticky-contact-bar a:hover {
+            opacity: 0.8;
+        }
+
+        .sticky-contact-bar i {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-contact-bar {
+                font-size: 0.85rem;
+                padding: 0.6rem 0.5rem;
+                gap: 1rem;
+            }
+        }
+
+        /* Client Logos Section */
+        .client-logos-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .client-logos-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .client-logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .client-logo-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .client-logo-item img {
+            max-width: 100%;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .logo-placeholder {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .client-logos-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .client-logo-item {
+                padding: 1rem;
+                min-height: 80px;
+            }
+
+            .client-logos-title {
+                font-size: 1.25rem;
+            }
+        }
+
+
     </style>
 </head>
 <body>
+
+        <!-- Sticky Contact Bar -->
+    <div class="sticky-contact-bar">
+        <a href="tel:+18095426929">
+            <i class="fas fa-phone"></i>
+            <span>+1 (809) 542-6929</span>
+        </a>
+        <a href="mailto:recepcion@pichardoramirez.com">
+            <i class="fas fa-envelope"></i>
+            <span>recepcion@pichardoramirez.com</span>
+        </a>
+    </div>
+
     <header>
         <div class="logo-container">
             <img src="logo-no-background3.png" alt="Pichardo, Ramirez & Co., SRL">
@@ -1029,7 +1164,7 @@
             </div>
             <div class="stat-item">
                 <div class="stat-number">200+</div>
-                <div class="stat-label" data-eng="Products Available" data-es="Productos Disponibles">Products Available</div>
+                <div class="stat-label" data-eng="Products Available" data-es="Productos Disponibles">Products Available from 20+ Countries</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">10+</div>
