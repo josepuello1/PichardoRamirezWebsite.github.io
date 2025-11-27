@@ -298,6 +298,27 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
+        .hero-cta-secondary {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            margin-top: 1rem; /* Space between buttons */
+        }
+
+        .hero-cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: white;
+        }
+
+        /* Optional: Stack buttons on mobile */
+        @media (max-width: 768px) {
+            .hero-cta,
+            .hero-cta-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
         .stats-bar {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: white;
@@ -777,8 +798,8 @@
 
         .timeline-content p {
             color: var(--text-light);
-                font-size: 0.95rem;
-    line-height: 1.5;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         @media (max-width: 768px) {
@@ -1144,62 +1165,132 @@
             }
         }
 
-.trade-map-section {
-    width: 100%;
-    max-width: 900px; /* Slightly smaller than container max-width */
-    margin: 0.2rem auto; /* Reduced spacing */
-    padding: 0; /* Remove padding */
-}
-
-.trade-map-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 400px; /* Reduced height for less prominence */
-    object-fit: contain;
-    opacity: 0.85; /* Slightly transparent to feel less "in your face" */
-    transition: opacity 0.3s ease;
-}
-
-.trade-map-image:hover {
-    opacity: 1; /* Full opacity on hover */
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .trade-map-section {
-        margin: 0.2rem auto; /* Minimal spacing on mobile */
-        max-width: 100%;
-        padding: 0 1rem; /* Just side padding to prevent edge touching */
-    }
-    
-    .trade-map-image {
-        max-height: 400px; /* Even smaller on mobile */
-    }
-}
-
-    .hero-cta-secondary {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
-        border: 2px solid rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
-        margin-top: 1rem; /* Space between buttons */
-    }
-
-    .hero-cta-secondary:hover {
-        background: rgba(255, 255, 255, 0.25);
-        border-color: white;
-    }
-
-    /* Optional: Stack buttons on mobile */
-    @media (max-width: 768px) {
-        .hero-cta,
-        .hero-cta-secondary {
+        .trade-map-section {
             width: 100%;
-            max-width: 300px;
+            max-width: 900px; /* Slightly smaller than container max-width */
+            margin: 0.2rem auto; /* Reduced spacing */
+            padding: 0; /* Remove padding */
         }
-    }
 
+        .trade-map-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 400px; /* Reduced height for less prominence */
+            object-fit: contain;
+            opacity: 0.85; /* Slightly transparent to feel less "in your face" */
+            transition: opacity 0.3s ease;
+        }
 
+        .trade-map-image:hover {
+            opacity: 1; /* Full opacity on hover */
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .trade-map-section {
+                margin: 0.2rem auto; /* Minimal spacing on mobile */
+                max-width: 100%;
+                padding: 0 1rem; /* Just side padding to prevent edge touching */
+            }
+            
+            .trade-map-image {
+                max-height: 400px; /* Even smaller on mobile */
+            }
+        }
+
+        .interactive-products-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columns on desktop */
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            position: relative;
+            aspect-ratio: 1 / 1; /* Square cards */
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(30, 41, 59, 0.95) 0%, rgba(30, 41, 59, 0.7) 70%, transparent 100%);
+            padding: 1.5rem 1rem 1rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover .product-card-overlay {
+            background: linear-gradient(to top, rgba(220, 38, 38, 0.95) 0%, rgba(220, 38, 38, 0.7) 70%, transparent 100%);
+        }
+
+        .product-card-overlay h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .product-card-overlay i {
+            font-size: 1.2rem;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover .product-card-overlay i {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Tablet view - 3 columns */
+        @media (max-width: 1024px) {
+            .interactive-products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Mobile view - 2 columns */
+        @media (max-width: 768px) {
+            .interactive-products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .product-card-overlay h4 {
+                font-size: 0.8rem;
+            }
+            
+            .product-card-overlay {
+                padding: 1rem 0.75rem 0.75rem;
+            }
+        }
 
     </style>
 </head>
@@ -1455,7 +1546,93 @@
                     </div>
                     <p id="expand-hint" style="text-align: center; margin-top: 0.5rem; color: var(--text-light); font-size: 0.9rem; cursor: pointer;" data-eng="Click/Press an Industry to expand categories" data-es="Haga clic/Presione en una Industria para expandir categorías">Click/Press an Industry to expand categories</p>
                 </div>
-                <img src="products3.jpg" alt="Industrial Products Overview" class="product-showcase-img">
+                <!-- <img src="products3.jpg" alt="Industrial Products Overview" class="product-showcase-img"> -->
+
+                <!-- Replace this entire section (around line 1236): -->
+                <!-- OLD: <img src="products3.jpg" alt="Industrial Products Overview" class="product-showcase-img"> -->
+
+                <!-- NEW: Interactive Product Grid -->
+                <div class="interactive-products-grid">
+                    <div class="product-card" onclick="scrollToIndustry(0)">
+                        <img src="product1resin.png" alt="Industrial Resins">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Industrial Resins" data-es="Resinas Industriales">Industrial Resins</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(1)">
+                        <img src="product2paper.png" alt="Paper, Board, Tissue">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Paper, Board, Tissue" data-es="Papel, Cartón, Tissue">Paper, Board, Tissue</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(2)">
+                        <img src="product7chemicals.png" alt="Chemicals & Specialties">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Chemicals & Specialties" data-es="Químicos y Especialidades">Chemicals & Specialties</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(3)">
+                        <img src="product3dairy.png" alt="Dairy Products">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Dairy Products" data-es="Productos Lácteos">Dairy Products</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(4)">
+                        <img src="product5flexible.png" alt="Food & Pharma Packaging">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Food & Pharma Packaging" data-es="Empaque Alimentario">Food & Pharma Packaging</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(5)">
+                        <img src="product9crop.png" alt="Crop Protection">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Crop Protection" data-es="Protección de Cultivos">Crop Protection</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(6)">
+                        <img src="product4wood.png" alt="Lumber & Wood Products">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Lumber & Wood Products" data-es="Maderas">Lumber & Wood Products</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(7)">
+                        <img src="product6pharma.png" alt="Pharmaceutical Glass">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Pharmaceutical Glass" data-es="Vidrio Farmacéutico">Pharmaceutical Glass</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(8)">
+                        <img src="product10machinery.png" alt="Industrial Machinery">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Industrial Machinery" data-es="Maquinaria Industrial">Industrial Machinery</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" onclick="scrollToIndustry(9)">
+                        <img src="product8steel.png" alt="Steel & Metals">
+                        <div class="product-card-overlay">
+                            <h4 data-eng="Steel & Metals" data-es="Acero y Metales">Steel & Metals</h4>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
 
                 <p id="expand-hint" style="text-align: center; margin-top: 0.5rem; color: var(--text-light); font-size: 0.9rem; cursor: pointer;" data-eng="Click/Press an Industry to expand categories" data-es="Haga clic/Presione en una Industria para expandir categorías">Click/Press an Industry to expand categories</p>
 
@@ -1676,8 +1853,6 @@
                 title: {eng: "Food & Pharma Packaging", es: "Empaque Alimentario y Farmacéutico"},
                 desc: {eng: "Glass, rigid and flexible packaging for food and pharmaceuticals", es: "Embalaje de vidrio, rígido y flexible para alimentos y farmacéuticos"},
                 products: [
-                    {name: "Pharma Glass Vials", specs: "SGD Pharma - Type I, II, III"},
-                    {name: "Glass Ampoules", specs: "Injectable grade"},
                     {name: "Blister Foil", specs: "Unit dose packaging"},
                     {name: "Flexible Laminates", specs: "Multi-layer films"},
                     {name: "Printed aluminium blister foil", specs: "Pharma-grade printed blister foil"},
@@ -1738,13 +1913,11 @@
                 ]
             },
             {
-                title: {eng: "Glass Solutions", es: "Soluciones de Vidrio"},
-                desc: {eng: "Exclusive Saint-Gobain France representative", es: "Representante exclusivo de Saint-Gobain Francia"},
+                title: {eng: "Pharmaceutical Glass", es: "Vidrio Farmaceutico"},
+                desc: {eng: "Exclusive SGD Pharma France representative", es: "Representante exclusivo de SGD Pharma Francia"},
                 products: [
-                    {name: "Float Glass", specs: "Clear & tinted"},
-                    {name: "Tempered Glass", specs: "Safety glass"},
-                    {name: "Laminated Glass", specs: "Security applications"},
-                    {name: "Low-E Glass", specs: "Energy efficient"}
+                    {name: "Pharma Glass Vials", specs: "SGD Pharma - Type I, II, III"},
+                    {name: "Glass Ampoules", specs: "Injectable grade"},
                 ]
             },
             {
@@ -1768,6 +1941,35 @@
                 ]
             }
         ];
+
+        // Add this function anywhere in your script section (after the industries array)
+
+        function scrollToIndustry(index) {
+            // First, render industries to ensure they exist in DOM
+            renderIndustries('');
+            
+            // Get all industry items
+            const industryItems = document.querySelectorAll('.industry-item');
+            
+            if (industryItems[index]) {
+                // Scroll to the specific industry
+                const targetItem = industryItems[index];
+                const header = targetItem.querySelector('.industry-header');
+                
+                // Smooth scroll to the item
+                targetItem.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+                
+                // Automatically expand the accordion after scrolling
+                setTimeout(() => {
+                    if (!header.classList.contains('active')) {
+                        toggleIndustry(header);
+                    }
+                }, 500);
+            }
+        }
 
         const navbar = document.getElementById('navbar');
         const languageToggle = document.getElementById('language-toggle');
