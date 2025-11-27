@@ -1293,16 +1293,17 @@
         }
         
         .interaction-hint {
-            max-width: 200px;
+            max-width: 400px;
             margin: 1.5rem auto 2rem; /* Changed from "0 auto 2rem" to add top margin */
             padding: 0.75rem 1rem;
             border-radius: 30px;
             border-left: 3px solid var(--accent-color);
             border-right: 3px solid var(--accent-color);
             display: flex;
-            flex-direction: column; /* Changed from default row */
+            flex-direction: center; /* Changed from default row */
+            justify-content: center;
             align-items: center;
-            gap: 0.75em;
+            gap: 0.5em;
             box-shadow: none;
         }
 
@@ -1318,6 +1319,12 @@
             text-align: center;
         }
 
+        .hint-content {
+            text-align: left; /* Changed from center since we're centering the whole box */
+            order: 1; /* Content comes after icon */
+            text-align: center;
+        }
+
         .hint-icon i {
             color: white;
             font-size: 1rem;
@@ -1330,14 +1337,6 @@
             margin: 0 0 0.15rem 0;
             text-align: center;
         
-        }
-
-        .hint-content p {
-            color: var(--text-light);
-            font-size: 0.85rem;
-            margin: 0;
-            line-height: 1.4;
-            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -1720,8 +1719,15 @@
                 </div>
 
                 <!-- <p id="expand-hint" style="text-align: center; margin-top: 0.5rem; color: var(--text-light); font-size: 0.9rem; cursor: pointer;" data-eng="Click/Press an Industry to expand categories" data-es="Haga clic/Presione en una Industria para expandir categorías">Click/Press an Industry to expand categories</p> -->
-
-
+                <div class="interaction-hint">
+                        <div class="hint-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="hint-content">
+                            <h4 data-eng="Expand the categories below" data-es="Explore cada categoría">Expand the categories below </h4>                                
+                        </div>
+                    </div>
+                
                 <div class="industry-accordion" id="industry-accordion"></div>
                 
 
