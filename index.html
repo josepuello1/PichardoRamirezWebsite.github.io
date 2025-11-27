@@ -1147,6 +1147,9 @@
             .trade-map-section {
             width: 100%;
             overflow: hidden; /* Important to contain the image */
+            /* NEW: Limit the container size and center it */
+            max-width: 1200px; /* Example limit: change this value as needed */
+            margin: 0 auto; /* Centers the container on the page */
         }
 
         .trade-map-image {
@@ -1155,7 +1158,7 @@
             height: auto;
             /* Optional: Ensure the image graphic isn't too tall */
             max-height: 400px; 
-            object-fit: cover; /* Ensures the image fills the container beautifully */
+            object-fit: contain; /* Use 'contain' to ensure the whole map is visible */
         }
 
 
@@ -1246,7 +1249,7 @@
                     <div class="differentiator-card">
                         <div class="differentiator-icon"><i class="fas fa-globe-americas"></i></div>
                         <h3 class="differentiator-title" data-eng="End-to-End Support" data-es="Soporte Integral">End-to-End Support</h3>
-                        <p class="differentiator-desc" data-eng="From sourcing to delivery, we handle everything" data-es="Desde abastecimiento hasta entrega, manejamos todo">From sourcing to delivery, we handle everything</p>
+                        <p class="differentiator-desc" data-eng="Strategy, Sales, Sourcing, Support, and Payment Management." data-es="Desde abastecimiento hasta entrega, manejamos todo">Strategy, Sales, Sourcing, Support, and Payment Management.</p>
                     </div>
                 </div>
                 <div class="trade-map-section">
