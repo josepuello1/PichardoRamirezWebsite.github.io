@@ -1178,6 +1178,27 @@
     }
 }
 
+    .hero-cta-secondary {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        margin-top: 1rem; /* Space between buttons */
+    }
+
+    .hero-cta-secondary:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: white;
+    }
+
+    /* Optional: Stack buttons on mobile */
+    @media (max-width: 768px) {
+        .hero-cta,
+        .hero-cta-secondary {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
 
 
     </style>
@@ -1231,6 +1252,11 @@
                 <span data-eng="Get in Touch" data-es="Solicite Precios / Información">Get in Touch / Request a Quote</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
+            <!-- ADD THIS NEW BUTTON -->
+            <a href="#industries" class="hero-cta hero-cta-secondary">
+                <span data-eng="View Our Products" data-es="Ver Nuestros Productos">View Our Products</span>
+                <i class="fas fa-box-open"></i>
+            </a>
         </div>
     </section>
 
@@ -1275,12 +1301,12 @@
                 
                 <div class="value-props">
                     <ul>
-                        <li data-eng="Competitive pricing through established relationships" data-es="Precios competitivos a través de relaciones establecidas">Competitive pricing through established relationships</li>
-                        <li data-eng="Quality assurance and certification support" data-es="Garantía de calidad y soporte de certificación">Quality assurance and certification support</li>
-                        <li data-eng="Fast response times and personalized service" data-es="Tiempos de respuesta rápidos y servicio personalizado">Fast response times and personalized service</li>
-                        <li data-eng="Technical expertise across all product lines" data-es="Experiencia técnica en todas las líneas">Technical expertise across all product lines</li>
-                        <li data-eng="Flexible payment terms and financing options" data-es="Términos de pago flexibles">Flexible payment terms and financing options</li>
-                        <li data-eng="Multi-generational family business built on trust" data-es="Negocio familiar construido sobre confianza">Multi-generational family business built on trust</li>
+                        <li data-eng="Competitive pricing" data-es="Precios competitivos">Competitive pricing</li>
+                        <li data-eng="Quality assurance" data-es="Garantía de calidad">Quality assurance</li>
+                        <li data-eng="Fast and personalized service" data-es="Tiempos de respuesta rápidos y servicio personalizado">Fast and personalized service</li>
+                        <li data-eng="Technical expertise" data-es="Experiencia técnica">Technical expertise</li>
+                        <li data-eng="Flexible payment terms" data-es="Términos de pago flexibles">Flexible payment terms</li>
+                        <li data-eng="Multi-generational family business" data-es="Negocio familiar multigeneracional">Multi-generational family business</li>
                     </ul>
                 </div>
                 <!-- Client Logos Section -->
