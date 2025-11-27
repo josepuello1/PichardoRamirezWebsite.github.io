@@ -1144,21 +1144,63 @@
             }
         }
 
-            .trade-map-section {
+        .trade-map-section {
             width: 100%;
-            overflow: hidden; /* Important to contain the image */
-            /* NEW: Limit the container size and center it */
-            max-width: 1200px; /* Example limit: change this value as needed */
-            margin: 0 auto; /* Centers the container on the page */
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 3rem auto; /* Added vertical spacing */
+            padding: 3rem 2rem; /* Added padding for breathing room */
+            background: linear-gradient(135deg, var(--surface-secondary) 0%, var(--surface-accent) 100%);
+            border-radius: 16px; /* Matches your site's rounded corners */
+            box-shadow: var(--shadow-lg); /* Adds depth */
+            position: relative;
+        }
+
+        /* Optional: Add a subtle overlay effect */
+        .trade-map-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.02) 0%, rgba(15, 23, 42, 0.03) 100%);
+            border-radius: 16px;
+            pointer-events: none;
         }
 
         .trade-map-image {
-            display: block; /* Removes any default space below the image */
+            display: block;
             width: 100%;
             height: auto;
-            /* Optional: Ensure the image graphic isn't too tall */
-            max-height: 400px; 
-            object-fit: contain; /* Use 'contain' to ensure the whole map is visible */
+            max-height: 500px; /* Increased from 400px for better visibility */
+            object-fit: contain;
+            border-radius: 12px; /* Rounded corners for the image itself */
+            box-shadow: var(--shadow); /* Subtle shadow */
+            background: white; /* Ensures white background stays clean */
+            padding: 2rem; /* Creates internal spacing from edges */
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Optional hover effect */
+        .trade-map-image:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .trade-map-section {
+                margin: 2rem auto;
+                padding: 2rem 1rem;
+            }
+            
+            .trade-map-image {
+                padding: 1rem;
+                max-height: 350px;
+            }
         }
 
 
