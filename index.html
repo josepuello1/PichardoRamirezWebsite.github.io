@@ -418,9 +418,10 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 0;
             width: 100%;                    /* ← ADD THIS */
             box-sizing: border-box;         /* ← ADD THIS */
+            
         }
 
         /* ADD THIS NEW MEDIA QUERY */
@@ -433,7 +434,7 @@
 
         .differentiator-card {
             background: white;
-            padding: 2rem;
+            padding: 1.25rem; /* Reduced padding to shrink the card height */
             border-radius: 16px;
             box-shadow: var(--shadow);
             text-align: center;
@@ -1143,6 +1144,21 @@
             }
         }
 
+            .trade-map-section {
+            width: 100%;
+            overflow: hidden; /* Important to contain the image */
+        }
+
+        .trade-map-image {
+            display: block; /* Removes any default space below the image */
+            width: 100%;
+            height: auto;
+            /* Optional: Ensure the image graphic isn't too tall */
+            max-height: 400px; 
+            object-fit: cover; /* Ensures the image fills the container beautifully */
+        }
+
+
 
     </style>
 </head>
@@ -1232,6 +1248,9 @@
                         <h3 class="differentiator-title" data-eng="End-to-End Support" data-es="Soporte Integral">End-to-End Support</h3>
                         <p class="differentiator-desc" data-eng="From sourcing to delivery, we handle everything" data-es="Desde abastecimiento hasta entrega, manejamos todo">From sourcing to delivery, we handle everything</p>
                     </div>
+                </div>
+                <div class="trade-map-section">
+                    <img src="globaltrade.png" alt="Global Trade and Supply Chain Network Map" class="trade-map-image">
                 </div>
                 
                 <div class="value-props">
